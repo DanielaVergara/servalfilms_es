@@ -49,6 +49,7 @@ body, html {
 .icon {
   width: 15%;
   margin-bottom: 10px; 
+  max-width: 150px; /* Ajusta el tamaño máximo para dispositivos más pequeños */
 }
 
 .divider {
@@ -65,6 +66,11 @@ body, html {
 .section-one .title,
 .section-one .subtitle {
   margin-top: 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 
@@ -132,6 +138,10 @@ body, html {
     margin: 10px;
   }
 
+  .home-container {
+    padding: 20px; /* Reducir el espaciado en dispositivos más pequeños */
+  }
+
   .image-description {
     height: auto; 
     margin-bottom: 20px; 
@@ -147,6 +157,16 @@ body, html {
   .title-images {
     margin-top: 100px;
     margin-bottom: 30px;
-    text-align: left; /* Alinear los títulos de las imágenes a la derecha */
+    text-align: left; 
+  }
+  .icon {
+    width: 40%; /* Cambia el tamaño de la imagen para dispositivos más pequeños */
+  }
+
+  .section-two,
+  .section-three,
+  .section-four {
+    max-height: 100vh; /* Establece una altura máxima para las secciones */
+    overflow-y: auto; /* Añade scroll si el contenido se desborda */
   }
 }
