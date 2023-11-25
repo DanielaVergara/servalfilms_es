@@ -1,0 +1,24 @@
+/* Estilos para el menú */
+.navbar {
+  border: 2px solid;
+  border-radius: 10px;
+  width: 200px; /* Ancho del menú */
+  top: 10%; /* Posición desde arriba */
+  bottom: 10%; /* Posición desde abajo */
+  overflow-y: auto; /* Agrega desplazamiento vertical si el contenido es demasiado grande */
+  max-height: calc(70vh); /* Limita la altura del menú al 80% del alto de la ventana */
+}
+
+/* Para que el menú se mantenga por encima del contenido */
+.fixed-right {
+  position: fixed;
+  right: 0;
+  z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 150px; /* Cambia el ancho en pantallas más pequeñas si es necesario */
+    max-height: 100vh; /* Ajusta la altura máxima para pantallas pequeñas */
+  }
+}

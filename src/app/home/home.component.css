@@ -1,0 +1,69 @@
+/* home.component.css */
+.home-container {
+  position: relative;
+  color: #FFFFFF; /* Color del texto sobre la imagen */
+  padding: 100px; /* Ajusta el espaciado según sea necesario */
+  height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+  display: flex; /* Usar flexbox para ajustar el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  text-align: center; /* Alinear el texto al centro */
+}
+
+/* Estilos para la imagen de fondo */
+body, html {
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  height: 100%; /* Ocupa el 100% del alto de la pantalla */
+}
+
+.home-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('../../assets/image.png'); /* Cambia la ruta por tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Cambiar la dirección de flexión a columna */
+  margin: 3%;
+}
+
+.title {
+  color: #FFC000; /* Color de letra amarilla */
+  text-shadow: 2px 2px 4px #888; /* Sombreado gris */
+}
+
+.subtitle {
+  color: white; /* Color de letra amarilla */
+  text-shadow: 2px 2px 4px #888; /* Sombreado gris */
+}
+
+.icon {
+  width: 15%;
+  margin-left: 0%; /* Margen del 20% a la izquierda */
+}
+
+@media (max-width: 768px) {
+  .icon {
+    margin-left: 10%; /* Ajustar margen para pantallas más pequeñas */
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 20vh; /* Altura del 20% del viewport */
+  overflow: hidden;
+}
+
+.divider-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
