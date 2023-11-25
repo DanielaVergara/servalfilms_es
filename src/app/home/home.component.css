@@ -127,26 +127,28 @@ body, html {
 }
 
 @media (max-width: 768px) {
-  .image-wrapper {
-    width: calc(100% - 40px); 
-    margin: 10px;
+  .home-container {
+    padding: 8%; /* Reducir el padding en pantallas pequeñas */
   }
 
-  .image-description {
-    height: auto; 
-    margin-bottom: 20px; 
-    padding: 10px; 
-  }
-
-  .justified-text {
-    overflow-y: auto; 
-    max-height: 300px; 
-
+  .container {
+    margin: 3% 3% 3% 5%; /* Ajustar los márgenes en pantallas más pequeñas */
+    margin-right: 5px; /* Reducir el margen derecho */
   }
 
   .title-images {
-    margin-top: 100px;
-    margin-bottom: 30px;
-    text-align: left; /* Alinear los títulos de las imágenes a la derecha */
+    margin-top: 10%; /* Reducir el margen superior */
+    margin-bottom: 5%; /* Reducir el margen inferior */
+  }
+
+  .image-description {
+    margin-bottom: 3%; /* Reducir el margen inferior */
+    padding: 5px; /* Agregar espaciado interno */
+  }
+
+  .justified-text {
+    margin-bottom: 10%; /* Reducir el margen inferior */
+    overflow-y: auto; /* Agregar desplazamiento vertical si es necesario */
+    max-height: 300px; /* Altura máxima */
   }
 }

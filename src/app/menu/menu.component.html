@@ -1,30 +1,35 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-right" style="background-color: #FFC000;">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mt-5">
-        <div class="eng-es">Eng/Esp</div>
-        <div class="title-serval"><u>Serval Films</u></div>
-       
-        <ul class="navbar-nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/inicio">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/inicio">Quienes somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/inicio">Portafolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/inicio">Campaña</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/inicio">Call to Action</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/inicio">Contatanos</a>
-          </li>
-        </ul>
+<nav class="navbar navbar-light bg-light fixed-right">
+  <button class="navbar-toggler d-block d-lg-none" type="button" (click)="toggleMenu()" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse d-none d-lg-block" [class.show]="isMenuOpen">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-12 mt-5">
+          <div class="eng-es">Eng/Esp</div>
+          <div class="title-serval"><u>Serval Films</u></div>
+          <ul class="navbar-nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#quienes-somos">Quiénes somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portafolio">Portafolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#campaña">Campaña</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#call-to-action">Call to Action</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contatanos">Contáctanos</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
