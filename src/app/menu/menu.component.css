@@ -1,24 +1,80 @@
 /* Estilos para el menú */
 .navbar {
-  border: 2px solid;
-  border-radius: 10px;
-  width: 200px; /* Ancho del menú */
-  top: 10%; /* Posición desde arriba */
-  bottom: 10%; /* Posición desde abajo */
-  overflow-y: auto; /* Agrega desplazamiento vertical si el contenido es demasiado grande */
-  max-height: calc(70vh); /* Limita la altura del menú al 80% del alto de la ventana */
+  border: 2px ;
+  border-radius: 50px;
+  white-space: nowrap;
+  width: 200px; 
+  top: 15%; 
+  bottom: 20%;
+  overflow-y: auto; 
+  max-height: calc(65vh); 
+  padding: 10px;
 }
 
 /* Para que el menú se mantenga por encima del contenido */
 .fixed-right {
   position: fixed;
   right: 0;
-  z-index: 1000; /* Asegura que esté por encima del contenido */
+  z-index: 1000;
+}
+
+/* Estilos para los elementos dentro del menú */
+.navbar .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar .col-lg-2 {
+  padding-top: 1px; 
+}
+
+.navbar .col-lg-2 .eng-es {
+  margin-bottom: 10px; 
+  margin-top: -80px;
+  margin-right: auto;
+  color: #808080;
+}
+
+.navbar .col-lg-2 .title-serval {
+  margin-bottom: 50px;
+  margin-top: 60px; 
+  margin-left: -50px;
+}
+
+.navbar ul li a {
+  margin-top: 2px;
+  margin-bottom: 1px;
+  margin-left: -50px; 
+  text-decoration: none;
+  color: black; 
+}
+
+.nav-link:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000; 
+  margin-top: 3px;
 }
 
 @media (max-width: 768px) {
   .navbar {
-    width: 150px; /* Cambia el ancho en pantallas más pequeñas si es necesario */
-    max-height: 100vh; /* Ajusta la altura máxima para pantallas pequeñas */
+    width: 150px;
+    max-height: 55vh;
+  }
+
+  .navbar .col-lg-2 .eng-es {
+    margin-top: -50px;
+  }
+
+  .navbar .col-lg-2 .title-serval {
+    margin-top: 30px;
+    margin-left: -20px;
+  }
+
+  .navbar ul li a {
+    margin-left: -20px;
   }
 }
