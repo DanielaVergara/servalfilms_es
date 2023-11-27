@@ -21,14 +21,37 @@
   margin-right: 20px; 
 }
 
-.contact-info {
-  margin-top: 20px;
-  text-align: center;
-  margin-left: 200px;
+/* Mantén los estilos existentes y agrega lo siguiente */
+
+.developer {
+  display: flex;
+  flex-direction: row-reverse; /* Cambia el orden de los elementos en pantallas más pequeñas */
+  justify-content: flex-end;
+  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
 }
 
-.company-name{
-  font-size: large;
-  white-space: nowrap;
-  margin-left: 50px;
+/* Ajustes para hacer el texto más adaptable */
+.contact-info {
+  margin-top: 10px; /* Reducido el margen superior */
+  text-align: center;
+  margin-left: 0; /* Elimina el margen izquierdo */
+}
+
+.company-name {
+  font-size: medium; /* Cambiado a tamaño de fuente mediano */
+  white-space: normal; /* Permite que el texto se envuelva en múltiples líneas */
+  text-align: center; /* Alinea el texto al centro */
+  margin-left: 0; /* Elimina el margen izquierdo */
+}
+
+
+@media screen and (max-width: 768px) {
+  .company-name p {
+    font-size: 14px; 
+    margin-bottom: 5px;
+  }
+
+  .contact-info {
+    font-size: 14px; 
+  }
 }
