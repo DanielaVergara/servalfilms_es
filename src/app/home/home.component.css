@@ -15,6 +15,25 @@ body, html {
   height: 100%; 
 }
 
+.divider {
+  width: 100%;
+  height: 15vh;
+  overflow: hidden;
+}
+
+
+.divider-one {
+  background: linear-gradient(
+    to bottom,
+    #260414 0%, 
+    #260414 33%, 
+    #440823 33%, 
+    #440823 66%,
+    #560a2c 66%,
+    #560a2c 100%
+  );
+}
+
 .home-container:before {
   content: "";
   position: absolute;
@@ -28,6 +47,30 @@ body, html {
   background-position: center;
 }
 
+.gif-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Asegura que el GIF esté detrás del contenido */
+}
+
+.gif-background .gif-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta el GIF dentro del contenedor sin recortes */
+}
+
+.container.section-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar los elementos en la columna */
+  align-items: center; /* Centrar los elementos horizontalmente */
+  height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+}
+
 .container {
   display: flex;
   flex-direction: column; 
@@ -36,26 +79,26 @@ body, html {
 }
 
 .title {
-  color: #FFC000;
-  text-shadow: 2px 2px 4px #888; 
-  margin-top: 10px;
+  font-family: 'Cinzel Decorative', serif;
+  color:#e3f5f5;
+  margin: 0; /* Elimina el margen por defecto del subtítulo */
+  text-shadow: #260414;
+  box-shadow: 20cm;
 }
 
 .subtitle {
-  color: white;
-  text-shadow: 2px 2px 4px #888; 
+  font-family: 'Cinzel Decorative', serif;
+  color: #ffffff;
+  margin: 0; /* Elimina el margen por defecto del subtítulo */
+
 }
 
 .icon {
   width: 15%;
-  margin-bottom: 10px; 
+  margin: 20px 0;
+
 }
 
-.divider {
-  width: 100%;
-  height: 20vh;
-  overflow: hidden;
-}
 
 .divider-image {
   width: 100%;
