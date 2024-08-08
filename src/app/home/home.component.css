@@ -78,19 +78,16 @@ body, html {
   margin-right: 200px; 
 }
 
-.title {
-  font-family: 'Cinzel Decorative', serif;
-  color:#e3f5f5;
-  margin: 0; /* Elimina el margen por defecto del subtítulo */
-  text-shadow: #260414;
-  box-shadow: 20cm;
-}
-
-.subtitle {
-  font-family: 'Cinzel Decorative', serif;
-  color: #ffffff;
-  margin: 0; /* Elimina el margen por defecto del subtítulo */
-
+.title, .subtitle {
+  display: inline-block;
+  font-family: 'Rosarivo', serif; /* O cualquier otra fuente que estés usando */
+  color: #FFFFFF;
+  text-shadow: 2px 0 8px rgba(0, 180, 255, 0.8),
+               -5px 0 8px rgba(255, 70, 0, 0.8),
+               0 0 4px rgba(255, 199, 0, 1);
+  mix-blend-mode: screen;
+  filter: blur(1px);
+  position: relative;
 }
 
 .icon {
