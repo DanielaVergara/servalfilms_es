@@ -38,7 +38,13 @@ body, html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -1; /* Asegura que el GIF esté detrás del contenido */
+  will-change: transform;
+  z-index: -1;
+  background-color: #000; 
+}
+
+.gif-image {
+  transition: opacity 0.5s ease-in-out;
 }
 
 .gif-background .gif-image {
@@ -59,34 +65,33 @@ body, html {
 }
 
 .container {
-  display: flex;
-  flex-direction: column; 
-  margin: 3%;
-  margin-right: 200px; 
+  /*display: flex;*/
+ /* flex-direction: column; */
+  /*margin-right: 200px; */
 }
 
 .title, .subtitle {
   display: inline-block;
   font-family: 'Rosarivo', serif; /* O cualquier otra fuente que estés usando */
-  color: #FFFFFF;
-  text-shadow: 2px 0 8px rgba(0, 180, 255, 0.8),
+  color: #ffffff;
+  text-shadow: 2px 0 8px rgba(0, 179, 255, 0.634),
                -5px 0 8px rgba(255, 70, 0, 0.8),
                0 0 4px rgba(255, 199, 0, 1);
   mix-blend-mode: screen;
+  font-size: 65px;
+  letter-spacing: 8px; /* Ajusta el espaciado entre letras si es necesario */
   filter: blur(1px);
   position: relative;
 }
 
 .icon {
   width: 15%;
-  margin: 20px 0;
-
 }
 
 /*delete*/
 .divider-image {
   width: 100%;
-  height: 10px;
+  height: 100px;
 }
 
 .section-one .title,
@@ -129,7 +134,7 @@ body, html {
 }
 
 .title-svg text {
-  font-family: Lora; /* Usa la misma fuente que en la sección uno */
+  font-family: "Rosarivo"; /* Usa la misma fuente que en la sección uno */
   letter-spacing: 5px; /* Ajusta el espaciado entre letras si es necesario */
   stroke: #ef940b;
   font-size: 60px; /* Ajusta este valor para cambiar el tamaño del texto */
