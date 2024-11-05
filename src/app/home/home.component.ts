@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 import gsap from 'gsap';
 
 @Component({
@@ -20,5 +20,23 @@ export class HomeComponent implements AfterViewInit {
       .from('.subtitle', { duration: 0.5, opacity: 1, y: 50, ease: 'power3.out', delay: 0.4 })
       .from('.icon', { duration: 0.5, opacity: 0, scale: 0.5, ease: 'power3.out' }, 2); 
   }
+
+ /* @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event): void {
+    const scrollPosition = window.scrollY; // Obtener la posición del scroll
+
+    // Ajustar el movimiento parallax de los elementos
+    gsap.to('.gif-background', {
+      y: scrollPosition * 0.5, // Cambia 0.5 por el factor que desees para ajustar la velocidad
+      ease: 'power1.inOut'
+    });
+
+
+    // Agregar efecto parallax al video
+    gsap.to('.section-three video', {
+      y: scrollPosition * 0.1, // Ajusta este valor para el efecto del video
+      ease: 'power1.inOut'
+    });
+  }*/
   
 }

@@ -1,172 +1,327 @@
-.home-container {
-  position: relative;
-  color: black; /* Color del texto sobre la imagen */
-  height: 100vh; /* Ocupa el 100% del alto de la pantalla */
-  display: flex; /* Usar flexbox para ajustar el contenido */
-  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  .home-container {
+    position: relative;
+    color: black; /* Color del texto sobre la imagen */
+    height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+    display: flex; /* Usar flexbox para ajustar el contenido */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    margin: 0; /* Elimina el margen para una apariencia más compacta */
+    padding: 0%;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .divider {
+    width: 100%;
+    height: 15vh;
+    overflow: hidden;
+  }
+
+  .divider-three {
+    background: linear-gradient(
+        to bottom,
+        #560a2c 0%,   
+        #560a2c 33%,  
+        #440823 33%, 
+        #440823 66%, 
+        #260414 66%,  
+        #260414 100%
+    );
+  }
+
+
+  .divider-two {
+    background: linear-gradient(
+        to bottom,
+        #560a2c 0%,   
+        #560a2c 33%,  
+        #440823 33%, 
+        #440823 66%, 
+        #260414 66%,  
+        #260414 100%
+    );
+  }
+
+  .divider-one {
+    background: linear-gradient(
+      to bottom,
+      #260414 0%, 
+      #260414 33%, 
+      #440823 33%, 
+      #440823 66%,
+      #560a2c 66%,
+      #560a2c 100%
+    );
+  }
+
+  .gif-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    will-change: transform;
+    z-index: -1;
+    background-color: #000; 
+  }
+
+  .gif-image {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .gif-background .gif-image {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin estirarse o hacer zoom */
+    object-position: center bottom; /* Centra la imagen dentro del contenedor */
+  }
+
+  .container.section-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar los elementos en la columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+    padding: 100px; /* Ajusta el espaciado según sea necesario */
+  }
+
+  .container {
+    /*display: flex;*/
+  /* flex-direction: column; */
+    /*margin-right: 200px; */
+  }
+
+  .title, .subtitle {
+    display: inline-block;
+    font-family: 'Rosarivo', serif; /* O cualquier otra fuente que estés usando */
+    color: #ffffff;
+    text-shadow: 2px 0 8px rgba(0, 179, 255, 0.634),
+                -5px 0 8px rgba(255, 70, 0, 0.8),
+                0 0 4px rgba(255, 199, 0, 1);
+    mix-blend-mode: screen;
+    font-size: 65px;
+    letter-spacing: 8px; /* Ajusta el espaciado entre letras si es necesario */
+    filter: blur(1px);
+    position: relative;
+  }
+
+  .icon {
+    width: 15%;
+  }
+
+  /*delete*/
+  .divider-image {
+    width: 100%;
+    height: 100px;
+  }
+
+  .section-one .title,
+  .section-one .subtitle {
+    margin-top: 0; 
+  }
+
+  .section-three .title {
+    margin-top: 0px; 
+    padding-top: 0%;
+  }
+
+  .section-three {
+    margin-top: 0px; 
+    padding-top: 0%;
+    background-color: #440823;
+  }
+
+  /*section two*/
+
+  .title-wrapper {
+    width: 300%;
+    padding: 0;
+    margin: 0;
+    max-width: 1000px;
+    text-align: center; 
+  }
+
+  .section-two {
+    background-color: #6d0a37; /* Color de fondo */
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Aumenté el padding para más espacio */
+    margin: 0;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+.section-two-images {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 20px; /* Agrega espacio entre las imágenes */
 }
 
-.divider {
-  width: 100%;
-  height: 15vh;
-  overflow: hidden;
+.section-two-image {
+    border-radius: 5px;
+    width: 280px; /* Tamaño de las imágenes */
+    transition: transform 0.3s ease; /* Transición para el zoom */
+    object-fit: cover;
+    border: 2px solid #cc7f00;
+}
+
+.section-two-text {
+  font-family: 'Rosario', sans-serif; /* Aplica Rosario */
+
+  font-size: 22px;
+    max-width: 1000px;
+    text-align: justify;
+    color: #eff8f8; /* Color del texto */
+    margin: 20px 0;
+    font-family: "Rosario"; /* Fuente */
+}
+
+/*BOTÓN*/
+
+/* Efecto de botón animado */
+.section-two-button {
+  background-color: #ef940b; /* Color de fondo inicial */
+  color: #000; /* Color del texto del botón */
+  border: 2px solid #000; /* Borde del botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-size: 18px; /* Tamaño de texto del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  margin-top: 20px; /* Espacio arriba del botón */
+  position: relative; /* Necesario para el efecto de animación */
+  overflow: hidden; /* Para ocultar los elementos internos */
+  transition: background-color 0.4s ease; /* Transición de color de fondo */
+}
+
+.section-two-button:hover {
+  background-color: #007bff; /* Color azul al pasar el mouse */
+}
+
+/* Efecto de texto del botón */
+.section-two-button::before {
+  position: absolute; /* Para animar el texto */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease; /* Transición para el efecto */
+}
+
+.section-two-button:hover::before {
+  transform: translate(-50%, -50%) scale(1.2); /* Escala el texto al hacer hover */
+}
+
+/* Cambia el texto al hacer hover */
+.section-two-button:hover::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px; /* Tamaño del nuevo texto */
+  color: #000; /* Color del nuevo texto */
+  transition: opacity 0.4s ease; /* Transición para la aparición del nuevo texto */
+}
+
+/* Controlar la opacidad del texto original al hacer hover */
+.section-two-button:hover::before {
+  opacity: 0; /* Oculta el texto original */
+}
+
+/*CLOSE BOTON*/
+
+
+.image-link:hover .section-two-image {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
+}
+  /*close section two */
+
+
+
+/*section three*/
+
+
+.home-container.section-three {
+  position: relative; /* Posiciona el contenedor de manera relativa */
+  width: 100%; /* Ancho completo del contenedor */
+  height: 100vh; /* Altura completa de la ventana */
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.section-three video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%; /* Ancho completo */
+  height: auto; /* Mantiene la relación de aspecto */
+  min-height: 100%; /* Asegura que la altura mínima sea 100% */
+  transform: translate(-50%, -50%); /* Centra el video */
+  object-fit: contain; /* Asegura que se muestre todo el video */
 }
 
 
-.divider-one {
-  background: linear-gradient(
-    to bottom,
-    #260414 0%, 
-    #260414 33%, 
-    #440823 33%, 
-    #440823 66%,
-    #560a2c 66%,
-    #560a2c 100%
-  );
-}
-
-.gif-background {
+.parallax-window {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  will-change: transform;
-  z-index: -1;
-  background-color: #000; 
-}
-
-.gif-image {
-  transition: opacity 0.5s ease-in-out;
-}
-
-.gif-background .gif-image {
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin estirarse o hacer zoom */
-  object-position: center bottom; /* Centra la imagen dentro del contenedor */
-}
-
-.container.section-one {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrar los elementos en la columna */
-  align-items: center; /* Centrar los elementos horizontalmente */
-  height: 100%; /* Asegura que ocupe toda la altura del contenedor */
-  padding: 100px; /* Ajusta el espaciado según sea necesario */
-}
-
-.container {
-  /*display: flex;*/
- /* flex-direction: column; */
-  /*margin-right: 200px; */
-}
-
-.title, .subtitle {
-  display: inline-block;
-  font-family: 'Rosarivo', serif; /* O cualquier otra fuente que estés usando */
-  color: #ffffff;
-  text-shadow: 2px 0 8px rgba(0, 179, 255, 0.634),
-               -5px 0 8px rgba(255, 70, 0, 0.8),
-               0 0 4px rgba(255, 199, 0, 1);
-  mix-blend-mode: screen;
-  font-size: 65px;
-  letter-spacing: 8px; /* Ajusta el espaciado entre letras si es necesario */
-  filter: blur(1px);
-  position: relative;
-}
-
-.icon {
-  width: 15%;
-}
-
-/*delete*/
-.divider-image {
-  width: 100%;
-  height: 100px;
-}
-
-.section-one .title,
-.section-one .subtitle {
-  margin-top: 0; 
-}
-
-.section-three .title {
-  margin-top: 10px; 
-}
-
-.section-three {
-  margin-top: 10px; 
-  background-color: #440823;
-}
-
-.section-two {
-  background-color: #6d0a37; /* Color de fondo para la sección dos */
-  width: 100vw; /* Ocupa el 100% del ancho de la vista (viewport) */
-  box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
-  overflow: hidden; /* Evita desbordamientos */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.title-wrapper {
-  width: 80%;
-  padding: 0;
-  margin: 0;
-  max-width: 1000px;
-  text-align: center; 
+  z-index: -1; /* Asegura que el video esté detrás del contenido */
+  transform: translateZ(0); /* Asegura que el contenedor sea tratado como un elemento 3D para mejor rendimiento */
 }
 
 
-.title-svg {
-  width: 100%;
-  padding-top: 0px;
-}
 
-.title-svg text {
-  font-family: "Rosarivo"; /* Usa la misma fuente que en la sección uno */
-  letter-spacing: 5px; /* Ajusta el espaciado entre letras si es necesario */
-  stroke: #ef940b;
-  font-size: 60px; /* Ajusta este valor para cambiar el tamaño del texto */
-  font-weight: 700;
-  stroke-width: 2;
-  animation: textAnimate 5s infinite alternate;
-  dominant-baseline: middle; /* Asegura que el texto esté centrado verticalmente */
-}
+/*close section three*/
 
-.section-four .title {
-  margin-top: 10px; 
-}
 
-@media (max-width: 768px) {
+  .title-svg {
+    width: 100%;
+    padding-top: 0px;
+  }
 
-  .justified-text {
-    overflow-y: auto; 
-    max-height: 300px; 
+  .title-svg text {
+    font-family: "Rosarivo"; /* Usa la misma fuente que en la sección uno */
+    letter-spacing: 5px; /* Ajusta el espaciado entre letras si es necesario */
+    stroke: #ef940b;
+    font-size: 150px; /* Ajusta este valor para cambiar el tamaño del texto */
+    font-weight: 700;
+    stroke-width: 2;
+    animation: textAnimate 5s infinite alternate;
+    dominant-baseline: middle; /* Asegura que el texto esté centrado verticalmente */
+  }
+
+  .section-four .title {
+    margin-top: 10px; 
+  }
+
+  @media (max-width: 768px) {
+
+    .justified-text {
+      overflow-y: auto; 
+      max-height: 300px; 
+
+    }
 
   }
 
-}
-
-@keyframes textAnimate {
-  0% {
-    stroke-dasharray: 0 50%;
-    stroke-dashoffset: 20%;
-    fill: hsl(189, 68%, 75%);
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset: 20%;
+      fill: hsl(189, 68%, 75%);
+    }
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffset: -20%;
+      fill: hsla(189, 68%, 75%, 0%);
+    }
   }
-  100% {
-    stroke-dasharray: 50% 0;
-    stroke-dashoffset: -20%;
-    fill: hsla(189, 68%, 75%, 0%);
-  }
-}
