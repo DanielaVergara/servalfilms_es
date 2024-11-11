@@ -14,9 +14,9 @@
   position: relative;
   display: inline-block;
   text-align: center;
-  margin-bottom: 20px;
-  width: 200px; /* Ajusta el tamaño del contenedor según el logo */
-  height: 200px; /* Mantén un tamaño cuadrado para el logo */
+  margin-bottom: 5px;
+  width: 200px;
+  height: 200px;
 }
 
 .image-container svg {
@@ -38,39 +38,29 @@
   transform: translate(-50%, -50%);
 }
 
-.circle-text text {
-  font-family: 'Arial', sans-serif;
-  font-size: 20px;
-  fill: #ef940b;
-  color: #ef940b;
+/* Modificar las líneas */
+.rough-line {
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+  border-top: 2px dashed #ef940b; /* Ejemplo de estilo para la línea */
 }
 
-.image-text-left, .image-text-right {
+.left-line {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: -50%; /* Ajusta la distancia de la línea a la izquierda */
   width: 50%;
-  color: #333;
 }
 
-.image-text-left {
-  left: -60%;
+.right-line {
+  position: absolute;
+  top: 50%;
+  right: -50%; /* Ajusta la distancia de la línea a la derecha */
+  width: 50%;
 }
 
-.image-text-right {
-  right: -60%;
-}
-
-.line-left, .line-right {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.line-left hr, .line-right hr {
-  border: 1px solid #333;
-  margin: 0;
-}
-
+/* Resto de los estilos */
 .gif-container {
   display: flex;
   justify-content: center;
@@ -78,9 +68,9 @@
 }
 
 .gif-image {
-  max-width: 90%; /* Reduce el tamaño de los GIFs */
+  max-width: 90%;
   height: auto;
-  border-radius: 10px;  /* Opcional, para darle bordes redondeados */
+  border-radius: 10px;
 }
 
 .social-icons i {
@@ -90,14 +80,18 @@
 }
 
 .social-icons i:hover {
-  color: #ef940b; /* Color de hover */
+  color: #ef940b;
 }
 
 footer .text-center p {
+  color: white;
+  font-family: 'Rosario', sans-serif;
   margin: 5px 0;
 }
 
 footer .text-center h3 {
+  color: white;
+  font-family: 'Rosario', sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -115,8 +109,19 @@ footer .col-md-3 .gif-container {
   margin-left: 20px;
 }
 
-.rough-line {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 20px; /* Define la altura, esto puede cambiar según tus necesidades */
-  background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+.rough-line-bottom {
+  width: 80%;
+  height: 2px;
+  background-color: #333;
+  margin: 10px auto;
 }
+
+.line-container {
+  width: 100px; /* Ajusta el tamaño de la línea */
+  height: 10px; /* Define la altura de la línea */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block; /* Asegura que el contenedor tenga un tamaño visual */
+}
+

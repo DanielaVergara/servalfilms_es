@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
-const rough = require('roughjs/bundled/rough.cjs');
+import rough from 'roughjs/bundled/rough';
 
 @Component({
   selector: 'app-footer',
@@ -14,10 +14,11 @@ export class FooterComponent implements AfterViewInit {
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngAfterViewInit(): void {
-    // Asegurarse de que Angular haya completado la detección de cambios
-    this.cdr.detectChanges(); 
+    this.cdr.detectChanges();
+    console.log("hola", rough);  // Asegúrate de que rough esté disponible
     this.drawRoughLines();
   }
+  
 
   drawRoughLines() {
     // Verificar que los elementos estén presentes
@@ -27,8 +28,8 @@ export class FooterComponent implements AfterViewInit {
       const rcRight = rough.canvas(this.lineRight.nativeElement);
 
       // Dibujar las líneas en los divs
-      rcLeft.line(10, 10, 300, 10, { stroke: 'orange', strokeWidth: 3 });
-      rcRight.line(10, 10, 300, 10, { stroke: 'orange', strokeWidth: 3 });
+      rcLeft.line(10, 10, 150, 10, { stroke: 'orange', strokeWidth: 3 });
+      rcRight.line(10, 10, 150, 10, { stroke: 'orange', strokeWidth: 3 });
     }
   }
 }
