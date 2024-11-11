@@ -20,6 +20,67 @@
     overflow: hidden;
   }
 
+  .divider-eight {
+    background: linear-gradient(
+        to bottom,
+        #560a2c 0%,   
+        #560a2c 33%,  
+        #440823 33%, 
+        #440823 66%, 
+        #260414 66%,  
+        #260414 100%
+    );
+  }
+
+  .divider-seven {
+    background: linear-gradient(
+        to bottom,
+        #560a2c 0%,   
+        #560a2c 33%,  
+        #440823 33%, 
+        #440823 66%, 
+        #260414 66%,  
+        #260414 100%
+    );
+  }
+
+  .divider-six {
+    background: linear-gradient(
+        to bottom,
+        #560a2c 0%,   
+        #560a2c 33%,  
+        #440823 33%, 
+        #440823 66%, 
+        #260414 66%,  
+        #260414 100%
+    );
+  }
+
+  .divider-five {
+    background: linear-gradient(
+        to bottom,
+        #560a2c 0%,   
+        #560a2c 33%,  
+        #440823 33%, 
+        #440823 66%, 
+        #260414 66%,  
+        #260414 100%
+    );
+  }
+
+  .divider-four {
+    background: linear-gradient(
+        to bottom,
+        #560a2c 0%,   
+        #560a2c 33%,  
+        #440823 33%, 
+        #440823 66%, 
+        #260414 66%,  
+        #260414 100%
+    );
+  }
+
+
   .divider-three {
     background: linear-gradient(
         to bottom,
@@ -189,6 +250,7 @@
 
 /* Efecto de botón animado */
 .section-two-button {
+  border-radius: 5px;
   background-color: #ef940b; /* Color de fondo inicial */
   color: #000; /* Color del texto del botón */
   border: 2px solid #000; /* Borde del botón */
@@ -252,36 +314,306 @@
   position: relative; /* Posiciona el contenedor de manera relativa */
   width: 100%; /* Ancho completo del contenedor */
   height: 100vh; /* Altura completa de la ventana */
-  overflow: hidden; /* Oculta el desbordamiento */
 }
 
 .section-three video {
-  position: absolute;
+  background-color: #000;
+  position: relative;
   top: 50%;
   left: 50%;
   width: 100%; /* Ancho completo */
   height: auto; /* Mantiene la relación de aspecto */
   min-height: 100%; /* Asegura que la altura mínima sea 100% */
   transform: translate(-50%, -50%); /* Centra el video */
-  object-fit: contain; /* Asegura que se muestre todo el video */
 }
-
-
-.parallax-window {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1; /* Asegura que el video esté detrás del contenido */
-  transform: translateZ(0); /* Asegura que el contenedor sea tratado como un elemento 3D para mejor rendimiento */
-}
-
-
 
 /*close section three*/
 
+
+/*section four*/
+
+
+/* SECCIÓN CUATRO */
+.section-four {
+  background-color: #6d0a37; /* Fondo en el mismo tono que la sección dos */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-four-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.section-four-text-container {
+  max-width: 500px;
+  color: #eff8f8;
+}
+
+.section-four-title {
+  font-family: 'Rosario', sans-serif;
+  color: #ef940b;
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.section-four-text {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/*.section-four-button {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #ef940b;
+  color: #000;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  margin-top: 20px;
+}
+
+.section-four-button:hover {
+  background-color: #007bff;
+}*/
+
+.section-four-button {
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+  cursor: pointer;
+}
+
+.section-four-button span {
+  background: rgb(0, 172, 238);
+  background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+              7px 7px 20px 0px rgba(0, 0, 0, .1),
+              4px 4px 5px 0px rgba(0, 0, 0, .1);
+  border-radius: 5px;
+  margin: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.section-four-button span:nth-child(1) {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+
+.section-four-button span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+
+.section-four-button:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+              7px 7px 20px 0px rgba(0, 0, 0, .1),
+              4px 4px 5px 0px rgba(0, 0, 0, .1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.section-four-button:hover span:nth-child(2) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+              7px 7px 20px 0px rgba(0, 0, 0, .1),
+              4px 4px 5px 0px rgba(0, 0, 0, .1);
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+
+.section-four-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-four-image {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #cc7f00;
+  transition: transform 0.3s ease;
+}
+
+.section-four-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/*close section four*/
+
+
+/*section five*/
+
+
+.home-container.section-five {
+  position: relative; /* Posiciona el contenedor de manera relativa */
+  width: 100%; /* Ancho completo del contenedor */
+  height: 100vh; /* Altura completa de la ventana */
+}
+
+.section-five video {
+  background-color: #000;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100%; /* Ancho completo */
+  height: auto; /* Mantiene la relación de aspecto */
+  min-height: 100%; /* Asegura que la altura mínima sea 100% */
+  transform: translate(-50%, -50%); /* Centra el video */
+}
+
+/*close section five*/
+
+/*section six*/
+/* Estilo general para la sección seis */
+.section-six {
+  background-color: #560a2c; /* Fondo en el tono deseado */
+  color: #eff8f8; /* Color del texto */
+  padding: 20px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el bloque de título y texto centrado en pantalla */
+.section-six-fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa el 100% de la pantalla */
+  text-align: center;
+}
+
+.section-six-title {
+  font-family: 'Rosarivo', serif;
+  font-size: 48px;
+  color: #ef940b; /* Color del título */
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.section-six-text {
+  font-family: 'Rosario', sans-serif;
+  font-size: 24px;
+  max-width: 800px;
+  color: #eff8f8;
+  margin: 0;
+}
+
+/* Estilos para el bloque de texto a la izquierda y foto a la derecha */
+.section-six-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding-top: 40px; /* Espacio superior */
+}
+
+.section-six-left-text {
+  flex: 1;
+  font-family: 'Rosario', sans-serif;
+  font-size: 22px;
+  color: #eff8f8;
+}
+
+.section-six-right-video {
+  width: 100%;
+  max-width: 560px; /* Puedes ajustar el tamaño máximo */
+  margin: 0 auto;
+}
+
+.section-six-right-video video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Bordes redondeados para la imagen */
+}
+
+/*close section six*/
+
+/*section seven*/
+
+
+.home-container.section-seven {
+  position: relative; /* Posiciona el contenedor de manera relativa */
+  width: 100%; /* Ancho completo del contenedor */
+  height: 100vh; /* Altura completa de la ventana */
+}
+
+.section-seven video {
+  background-color: #000;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100%; /* Ancho completo */
+  height: auto; /* Mantiene la relación de aspecto */
+  min-height: 100%; /* Asegura que la altura mínima sea 100% */
+  transform: translate(-50%, -50%); /* Centra el video */
+}
+
+/*close section seven*/
+
+
+/*section eight*/
+
+
+.home-container.section-eight {
+  position: relative; /* Posiciona el contenedor de manera relativa */
+  width: 100%; /* Ancho completo del contenedor */
+  height: 100vh; /* Altura completa de la ventana */
+}
+
+.section-eight video {
+  background-color: #000;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100%; /* Ancho completo */
+  height: auto; /* Mantiene la relación de aspecto */
+  min-height: 100%; /* Asegura que la altura mínima sea 100% */
+  transform: translate(-50%, -50%); /* Centra el video */
+}
+
+/*close section eight*/
 
   .title-svg {
     width: 100%;
