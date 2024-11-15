@@ -23,24 +23,24 @@
   .divider-eight {
     background: linear-gradient(
         to bottom,
-        #560a2c 0%,   
-        #560a2c 33%,  
-        #440823 33%, 
-        #440823 66%, 
-        #260414 66%,  
-        #260414 100%
+        #042426 0%,   
+        #042426 33%,  
+        #00191b 33%, 
+        #00191b 66%, 
+        #001214 66%,  
+        #001214 100%
     );
   }
 
   .divider-seven {
     background: linear-gradient(
         to bottom,
-        #560a2c 0%,   
-        #560a2c 33%,  
-        #440823 33%, 
-        #440823 66%, 
-        #260414 66%,  
-        #260414 100%
+        #001214 0%,   
+        #001214 33%,  
+        #00191b 33%, 
+        #00191b 66%, 
+        #042426 66%,  
+        #042426 100%
     );
   }
 
@@ -533,8 +533,9 @@
 }
 
 .section-six-right-video {
+  padding: 20px;
   width: 50%;
-  height: 120%;
+  height: 160%;
   display: flex;
   justify-content: center;
 }
@@ -577,25 +578,129 @@
 
 /*section eight*/
 
-
+/* Estructura general de la sección */
 .home-container.section-eight {
-  position: relative; /* Posiciona el contenedor de manera relativa */
-  width: 100%; /* Ancho completo del contenedor */
-  height: 100vh; /* Altura completa de la ventana */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: black;
+  padding: 0;
+  margin: 0;
+  background-color: #0e2c2f; /* Fondo de la sección */
 }
 
-.section-eight video {
-  background-color: #000;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 100%; /* Ancho completo */
-  height: auto; /* Mantiene la relación de aspecto */
-  min-height: 100%; /* Asegura que la altura mínima sea 100% */
-  transform: translate(-50%, -50%); /* Centra el video */
+.section-eight-title {
+  text-align: left;
+  align-content: baseline;
+  font-size: 36px;
+  font-family: 'Rosarivo', serif;
+  color: #ef940b;
+  letter-spacing: 4px;
+  margin-bottom: 70px;
 }
+
+.section-eight-content {
+  width: 80%;
+  max-width: 1200px;
+  margin-top: 30px;
+}
+
+.section-eight-item {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo suave para cada item */
+  border-radius: 8px;
+  width: 80%;
+  transition: transform 0.3s ease;
+}
+
+.section-eight-item:hover {
+  transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+}
+
+.section-eight-text {
+  font-family: 'Rosario', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.section-eight-hover-text {
+  text-align: left;
+  display: none;
+  font-size: 17px;
+  font-family: 'Rosario', sans-serif;
+  color: #ef940b; /* Color para el hover */
+}
+
+.section-eight-item:hover .section-eight-hover-text {
+  display: block;
+  margin-top: 10px;
+}
+
+.section-eight-divider {
+  height: 5px; /* Aumenta el grosor de la línea */
+  width: 70%;
+  background-color: rgb(153, 140, 20); /* Color de la línea */
+  border: none; /* Elimina cualquier borde predeterminado */
+  margin: 20px 0; /* Ajusta el espacio alrededor del <hr> */
+}
+
+/*tú*/
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:  #151719;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  text-align: right;  /* Esto alinea todo el contenido a la derecha */
+}
+
+.section-eight-title {
+  text-align: left  ;  /* Alinea el h2 a la derecha */
+  font-size: 60px;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #ef940b;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+/*close tú*/
 
 /*close section eight*/
+
 
   .title-svg {
     width: 100%;

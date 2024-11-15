@@ -1,20 +1,39 @@
+.footerintitle {
+  padding: 0% !important;
+  font-family: 'Rosario', sans-serif ;
+  color: #ef940b;
+  letter-spacing: 2px;
+  font-size: 2.5rem !important;  /* Asegúrate de que se aplique el tamaño de fuente */
+  line-height: 1.2;
+}
+
+
 .footer {
+  font-family: 'Rosario', sans-serif;
+  font-size: 1.2rem;  /* Tamaño de fuente */
   width: 100%;
   background-color: black;
-  padding: 0px 0;
-  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 50px;
 }
 
 .footer .container {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Cambiar de flex-end a flex-start */
+  align-items: center; /* Centrar los elementos */
+  height: 100%;
 }
 
 .image-container {
   position: relative;
   display: inline-block;
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 20px;  /* Ajuste para que no quede tan pegado al texto */
   width: 200px;
   height: 200px;
 }
@@ -38,7 +57,6 @@
   transform: translate(-50%, -50%);
 }
 
-/* Modificar las líneas */
 .rough-line {
   width: 100%;
   height: 20px;
@@ -60,7 +78,6 @@
   width: 50%;
 }
 
-/* Resto de los estilos */
 .gif-container {
   display: flex;
   justify-content: center;
@@ -77,6 +94,7 @@
   margin: 10px;
   color: #333;
   cursor: pointer;
+  padding-bottom: 50px;
 }
 
 .social-icons i:hover {
@@ -125,3 +143,17 @@ footer .col-md-3 .gif-container {
   display: inline-block; /* Asegura que el contenedor tenga un tamaño visual */
 }
 
+footer .text-center {
+  margin-bottom: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+}
+
+footer p {
+  margin-bottom: 0; /* Elimina cualquier espacio innecesario en el pie de página */
+}

@@ -1,12 +1,10 @@
 <footer class="footer">
     <div class="container">
-        <!-- Parte superior: Imagen circular con texto alrededor -->
-        <div class="row align-items-center text-center">
+        <!-- Contenedor para el contenido de arriba (imagen y texto) -->
+        <div class="row text-center mb-4">
             <div class="col-md-12">
                 <div class="image-container position-relative">
-                    <!-- SVG del texto curvado alrededor del logo -->
                     <svg id="svg" width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="position-absolute top-0 start-0">
-                        <!-- Definir el círculo como path -->
                         <defs>
                             <path d="M 100 100
                                 m -80, 0
@@ -14,37 +12,28 @@
                                 a 80,80 0 1,1 -160,0" id="pathSlf6u6uz93">
                             </path>
                         </defs>
-                        
-                        <!-- Aplicar el texto al path -->
                         <text font-size="25" font-family="Cinzel Decorative, serif" fill="#ef940b">
                             <textPath xlink:href="#pathSlf6u6uz93" startOffset="25%" text-anchor="middle">
                                 ¡HagAmOS ciNE!
                             </textPath>
                         </text>
                     </svg>
-                    <!-- Imagen circular -->
                     <img src="../../assets/footer/logo.png" alt="Imagen" class="rounded-circle" width="50" height="50">
                 </div>
             </div>
         </div>
 
-        <!-- Lineas a la izquierda y derecha de la imagen -->
-        <div #lineLeft style="width: 150px; height: 10px; background-color: transparent;"></div>
-        <div #lineRight style="width: 150px; height: 10px; background-color: transparent;"></div>
-
-                     
-  
-        <!-- Parte inferior: GIFs en lugar de videos -->
-        <div class="row mt-5">
-            <div class="col-md-3 text-center">
+        <!-- Contenedor para los GIFs y los datos de contacto al mismo nivel -->
+        <div class="row justify-content-between align-items-center" style="height: 300px;"> <!-- Ajusta la altura según sea necesario -->
+            <div class="col-md-4 d-flex justify-content-start">
                 <div class="gif-container">
                     <img src="../../assets/footer/Gif Guionista.gif" alt="GIF 1" class="gif-image">
                 </div>
             </div>
-            
-            <!-- Información de contacto y redes sociales (centro) -->
-            <div class="col-md-6 text-center">
-                <h3>Serval Films</h3>
+
+            <!-- Datos de contacto en el centro -->
+            <div class="col-md-4 text-center" style="padding-top: 50px;"> <!-- Puedes ajustar el padding-top si necesitas más separación -->
+                <h3 class="footerintitle">Serval Films</h3>
                 <p>director@servalfilms.com</p>
                 <p>+57 350 537 7292</p>
                 <p>+57 311 2860608</p>
@@ -54,18 +43,18 @@
                     <i class="fab fa-linkedin fa-2x social-icon"></i>
                     <i class="fab fa-youtube fa-2x social-icon"></i>
                     <i class="fas fa-share-alt fa-2x social-icon"></i>
-                </div>                
+                </div>
             </div>
-  
-            <div class="col-md-3 text-center">
+
+            <div class="col-md-4 d-flex justify-content-end">
                 <div class="gif-container">
                     <img src="../../assets/footer/Gif Camara.gif" alt="GIF 2" class="gif-image">
                 </div>
             </div>
         </div>
 
-        <!-- Pie de página -->
-        <div class="row text-center mt-3">
+        <!-- "Desarrollado por" centrado en la parte inferior -->
+        <div class="row text-center">
             <div class="col-md-12">
                 <p>Desarrollado por Daniela Vergara Alzate</p>
             </div>
