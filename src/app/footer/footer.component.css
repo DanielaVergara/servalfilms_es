@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .footer .container {
@@ -33,7 +33,7 @@
   position: relative;
   display: inline-block;
   text-align: center;
-  margin-bottom: 20px;  /* Ajuste para que no quede tan pegado al texto */
+  margin-bottom: 20px;
   width: 200px;
   height: 200px;
 }
@@ -57,26 +57,25 @@
   transform: translate(-50%, -50%);
 }
 
-.rough-line {
-  width: 100%;
-  height: 20px;
-  background-color: transparent;
-  border-top: 2px dashed #ef940b; /* Ejemplo de estilo para la línea */
+.image-container {
+  position: relative;
+  display: inline-block;
 }
 
-.left-line {
+#myCanvasLeft, #myCanvasRight {
   position: absolute;
-  top: 50%;
-  left: -50%; /* Ajusta la distancia de la línea a la izquierda */
-  width: 50%;
+  top: 50%; /* Centra ambos elementos en la altura */
+  transform: translateY(-50%); /* Ajusta la posición vertical para que estén perfectamente centrados */
 }
 
-.right-line {
-  position: absolute;
-  top: 50%;
-  right: -50%; /* Ajusta la distancia de la línea a la derecha */
-  width: 50%;
+#myCanvasLeft {
+  left: -400px;  /* Ajusta la posición a la izquierda */
 }
+
+#myCanvasRight {
+  right: -400px;  /* Ajusta la posición a la derecha */
+}
+
 
 .gif-container {
   display: flex;
@@ -94,7 +93,7 @@
   margin: 10px;
   color: #333;
   cursor: pointer;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .social-icons i:hover {

@@ -106,3 +106,10 @@
     margin-left: -20px;
   }
 }
+
+.navbar.hidden {
+  opacity: 0;
+  pointer-events: none; /* Desactiva la interacción con los elementos cuando está oculto */
+  transition: opacity 0.5s ease; /* Transición suave */
+}
+

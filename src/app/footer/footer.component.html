@@ -4,12 +4,14 @@
         <div class="row text-center mb-4">
             <div class="col-md-12">
                 <div class="image-container position-relative">
+                    <!-- Canvas a la izquierda -->
+                    <canvas #canvasLeft id="myCanvasLeft" width="300" height="100"></canvas>        
                     <svg id="svg" width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="position-absolute top-0 start-0">
                         <defs>
                             <path d="M 100 100
-                                m -80, 0
-                                a 80,80 0 1,1 160,0
-                                a 80,80 0 1,1 -160,0" id="pathSlf6u6uz93">
+                                    m -80, 0
+                                    a 80,80 0 1,1 160,0
+                                    a 80,80 0 1,1 -160,0" id="pathSlf6u6uz93">
                             </path>
                         </defs>
                         <text font-size="25" font-family="Cinzel Decorative, serif" fill="#ef940b">
@@ -19,12 +21,15 @@
                         </text>
                     </svg>
                     <img src="../../assets/footer/logo.png" alt="Imagen" class="rounded-circle" width="50" height="50">
-                </div>
+                    <!-- Canvas a la derecha -->
+                    <canvas #canvasRight id="myCanvasRight" width="300" height="100"></canvas>
+                                    </div>
             </div>
         </div>
+        
 
-        <!-- Contenedor para los GIFs y los datos de contacto al mismo nivel -->
-        <div class="row justify-content-between align-items-center" style="height: 300px;"> <!-- Ajusta la altura según sea necesario -->
+        <!-- Resto del contenido (GIFs y datos de contacto) -->
+        <div class="row justify-content-between align-items-center" style="height: 300px;">
             <div class="col-md-4 d-flex justify-content-start">
                 <div class="gif-container">
                     <img src="../../assets/footer/Gif Guionista.gif" alt="GIF 1" class="gif-image">
@@ -32,7 +37,7 @@
             </div>
 
             <!-- Datos de contacto en el centro -->
-            <div class="col-md-4 text-center" style="padding-top: 50px;"> <!-- Puedes ajustar el padding-top si necesitas más separación -->
+            <div class="col-md-4 text-center" style="padding-top: 50px;">
                 <h3 class="footerintitle">Serval Films</h3>
                 <p>director@servalfilms.com</p>
                 <p>+57 350 537 7292</p>
