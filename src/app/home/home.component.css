@@ -250,55 +250,77 @@
 
 /*BOTÓN*/
 
-/* Efecto de botón animado */
+
 .section-two-button {
-  border-radius: 5px;
-  background-color: #ef940b; /* Color de fondo inicial */
-  color: #000; /* Color del texto del botón */
-  border: 2px solid #000; /* Borde del botón */
-  padding: 10px 20px; /* Espaciado interno del botón */
-  font-size: 18px; /* Tamaño de texto del botón */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  margin-top: 20px; /* Espacio arriba del botón */
-  position: relative; /* Necesario para el efecto de animación */
-  overflow: hidden; /* Para ocultar los elementos internos */
-  transition: background-color 0.4s ease; /* Transición de color de fondo */
+  font-family: 'Cinzel Decorative', serif; /* Fuente Cinzel Decorative */
+  display: flex;
+  align-items: center; /* Alinea verticalmente los span */
+  justify-content: center; /* Centra los span horizontalmente */
+  padding: 12px 90px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  letter-spacing: 1px; /* Añadimos espaciado entre letras */
+  transition: all 0.2s ease; /* Transición suave en hover */
 }
 
-.section-two-button:hover {
-  background-color: #007bff; /* Color azul al pasar el mouse */
+.section-two-button span {
+  /* Establece el color de fondo para los span */
+  background-color: #ef940b; /* Color de fondo naranja */
+  /* Propiedades de diseño */
+  display: inline-block; /* Hace que el span se comporte como un bloque en línea */
+  position: absolute; /* Permite posicionar el span de manera absoluta dentro del contenedor */
+  width: 500px; /* Ancho del span */
+  height: 40px; /* Altura del span */
+  border-radius: 5px; /* Bordes con radio de 5px */  
+  cursor: pointer; /* El puntero cambia a mano cuando se pasa por encima */
+  text-align: center; /* Centra el texto dentro del span */
+  /* Tamaño de caja y padding */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del elemento */
+  padding: 12px 40px; /* Espaciado interno: 12px arriba y abajo, 40px a los lados */
+  /* Transiciones suaves para animación */
+  -webkit-transition: all 0.3s; /* Transición para navegadores Webkit */
+  transition: all 0.3s; /* Transición para todos los navegadores */
 }
 
-/* Efecto de texto del botón */
-.section-two-button::before {
-  position: absolute; /* Para animar el texto */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.4s ease; /* Transición para el efecto */
+
+.section-two-button span:nth-child(1) {
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
 }
 
-.section-two-button:hover::before {
-  transform: translate(-50%, -50%) scale(1.2); /* Escala el texto al hacer hover */
+.section-two-button span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
 }
 
-/* Cambia el texto al hacer hover */
-.section-two-button:hover::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px; /* Tamaño del nuevo texto */
-  color: #000; /* Color del nuevo texto */
-  transition: opacity 0.4s ease; /* Transición para la aparición del nuevo texto */
+.section-two-button:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+              7px 7px 20px 0px rgba(0, 0, 0, .1),
+              4px 4px 5px 0px rgba(0, 0, 0, .1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 
-/* Controlar la opacidad del texto original al hacer hover */
-.section-two-button:hover::before {
-  opacity: 0; /* Oculta el texto original */
+.section-two-button:hover span:nth-child(2) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+              7px 7px 20px 0px rgba(0, 0, 0, .1),
+              4px 4px 5px 0px rgba(0, 0, 0, .1);
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
 }
 
 /*CLOSE BOTON*/
+
 
 
 .image-link:hover .section-two-image {
@@ -336,18 +358,25 @@
 
 
 /* SECCIÓN CUATRO */
+
 .section-four {
+  min-height: 80vh; /* Esto hace que la sección ocupe al menos el 80% de la altura de la pantalla */
   background-color: #3e0f42; /* Fondo en el mismo tono que la sección dos */
   padding: 40px 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  justify-content: space-between; /* Alinea el contenido: espacio entre los elementos */
+  align-items: center; /* Centra el contenido en el eje horizontal */
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
 }
+
 
 .section-four-content {
   display: flex;
   gap: 100px;
   align-items: center;
   max-width: 1200px;
+  flex-grow: 1; /* Hace que esta sección crezca y ocupe el espacio disponible */
 }
 
 .section-four-text-container {
@@ -367,28 +396,41 @@
   margin: 10px 0;
 }
 
-.section-four-button span {
-  background: rgb(0, 172, 238);
-  background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
-  display: block;
-  position: absolute;
-  width: 200px;
-  height: 40px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-              7px 7px 20px 0px rgba(0, 0, 0, .1),
-              4px 4px 5px 0px rgba(0, 0, 0, .1);
-  border-radius: 5px;
-  margin: 5;
-  text-align: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+
+.section-four-button {
+  font-family: 'Cinzel Decorative', serif; /* Fuente Cinzel Decorative */
+  display: flex;
+  align-self: center; /* Centra el botón en la parte inferior */
+  margin-top: auto;
+  align-items: center; /* Alinea verticalmente los span */
+  justify-content: center; /* Centra los span horizontalmente */
+  padding: 12px 90px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  letter-spacing: 1px; /* Añadimos espaciado entre letras */
+  transition: all 0.2s ease; /* Transición suave en hover */
 }
 
+.section-four-button span {
+  /* Establece el color de fondo para los span */
+  background-color: #ef940b; /* Color de fondo naranja */
+  /* Propiedades de diseño */
+  display: inline-block; /* Hace que el span se comporte como un bloque en línea */
+  position: absolute; /* Permite posicionar el span de manera absoluta dentro del contenedor */
+  width: 500px; /* Ancho del span */
+  height: 40px; /* Altura del span */
+  border-radius: 5px; /* Bordes con radio de 5px */  
+  cursor: pointer; /* El puntero cambia a mano cuando se pasa por encima */
+  text-align: center; /* Centra el texto dentro del span */
+  /* Tamaño de caja y padding */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del elemento */
+  padding: 12px 40px; /* Espaciado interno: 12px arriba y abajo, 40px a los lados */
+  /* Transiciones suaves para animación */
+  -webkit-transition: all 0.3s; /* Transición para navegadores Webkit */
+  transition: all 0.3s; /* Transición para todos los navegadores */
+}
+
+
 .section-four-button span:nth-child(1) {
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
   transform: rotateX(90deg);
@@ -424,6 +466,7 @@
   -moz-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
+
 
 
 .section-four-images {
@@ -613,7 +656,7 @@
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.1); /* Fondo suave para cada item */
   border-radius: 8px;
-  width: 80%;
+  width: 90%;
   transition: transform 0.3s ease;
 }
 
@@ -643,7 +686,7 @@
 
 .section-eight-divider {
   height: 5px; /* Aumenta el grosor de la línea */
-  width: 70%;
+  width: 85%;
   background-color: rgb(153, 140, 20); /* Color de la línea */
   border: none; /* Elimina cualquier borde predeterminado */
   margin: 20px 0; /* Ajusta el espacio alrededor del <hr> */
@@ -745,3 +788,8 @@ body {
       fill: hsla(189, 68%, 75%, 0%);
     }
   }
+
+
+  /*MOBILE*/
+
+  

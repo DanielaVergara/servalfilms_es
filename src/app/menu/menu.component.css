@@ -1,3 +1,7 @@
+.navbar ul li a {
+  margin-left: 0; /* Eliminar márgenes negativos */
+}
+
 /* Estilos para el menú */
 .navbar {
   border: 2px solid #cc7f00;
