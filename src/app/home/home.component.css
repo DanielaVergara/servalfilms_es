@@ -97,7 +97,7 @@
 
 
   .divider-two {
-    background: linear-gradient(
+   /* background: linear-gradient(
         to bottom,
         #560a2c 0%,   
         #560a2c 33%,  
@@ -105,7 +105,18 @@
         #440823 66%, 
         #260414 66%,  
         #260414 100%
-    );
+    );*/
+    background-color: #260414;
+    background-image: linear-gradient( to bottom,
+    #560a2c 0%,   
+    #560a2c 33%,  
+    #440823 33%, 
+    #440823 66%, 
+    #260414 66%,  
+    #260414 100%), url('../../assets/home/sectiontwo/divider_noise.png');
+    /*background-image: url('../../assets/home/sectiontwo/background_noise.png'); *//* Imagen de granito */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
   }
 
   .divider-one {
@@ -211,6 +222,9 @@
 
   .section-two {
     background-color: #6d0a37; /* Color de fondo */
+    background-image: url('../../assets/home/sectiontwo/background_noise.png'); /* Imagen de granito */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     width: 100vw;
     box-sizing: border-box;
     overflow: hidden;
@@ -362,6 +376,9 @@
 .section-four {
   min-height: 80vh; /* Esto hace que la sección ocupe al menos el 80% de la altura de la pantalla */
   background-color: #3e0f42; /* Fondo en el mismo tono que la sección dos */
+  background-image: url('../../assets/home/sectionFour/background_noise.png'); /* Imagen de granito */
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
   padding: 40px 20px;
   display: flex;
   flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
@@ -387,12 +404,10 @@
 .section-four-title {
   font-family: 'Rosario', sans-serif;
   color: #ef940b;
-  font-size: 32px;
   padding-bottom: 15px;
 }
 
 .section-four-text {
-  font-size: 18px;
   margin: 10px 0;
 }
 
@@ -517,8 +532,11 @@
 /*section six*/
 .section-six {
   background-color: #122739; /* Fondo oscuro */
+  background-image: url('../../assets/home/sectionSix/background-noise.png'); /* Imagen de granito */
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
   color: #ffffff; /* Texto en blanco */
-  padding: 50px 0;
+  padding: 90px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -633,6 +651,9 @@
   padding: 0;
   margin: 0;
   background-color: #0e2c2f; /* Fondo de la sección */
+  background-image: url('../../assets/home/sectionEight/background_noise.png'); /* Imagen de granito */
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .section-eight-title {
