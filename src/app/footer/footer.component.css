@@ -1,37 +1,24 @@
-.footerintitle {
-  margin: 0%;
-  margin-top: 10%;
-  padding: 0% !important;
-  font-family: 'Rosario', sans-serif ;
-  color: #ef940b;
-  letter-spacing: 2px;
-  font-size: 2.5rem !important;  /* Asegúrate de que se aplique el tamaño de fuente */
-  line-height: 1.2;
-}
-
-
+/* Ajustes generales para el footer */
 .footer {
   font-family: 'Rosario', sans-serif;
   font-size: 1.2rem;
-  width: 100%; /* Asegura que ocupe todo el ancho */
+  width: 100%;
   background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; /* Centra los contenidos */
-  padding-top: 8%;
-  overflow: hidden; /* Oculta cualquier contenido que desborde */
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  overflow: hidden;
 }
-
 
 .footer .container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Cambiar de flex-end a flex-start */
-  align-items: center; /* Centrar los elementos */
-  height: 100%;
+  align-items: center;
+  width: 100%;
 }
 
 .image-container {
@@ -41,6 +28,7 @@
   margin-bottom: 20px;
   width: 200px;
   height: 200px;
+  margin: 0 auto; /* Centra el contenedor */
 }
 
 .image-container svg {
@@ -53,8 +41,8 @@
 
 .image-container img {
   width: 100%;
-  max-width: 150px; /* Limita el tamaño */
-  height: auto; /* Mantiene la proporción */
+  max-width: 150px;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
@@ -63,32 +51,28 @@
   transform: translate(-50%, -50%);
 }
 
-.image-container {
-  width: 150px; /* Ancho del contenedor */
-  height: auto;
-  margin: 0 auto; /* Centra el contenedor */
-  position: relative;
-}
-
-
 #myCanvasLeft, #myCanvasRight {
   position: absolute;
-  top: 50%; /* Centra ambos elementos en la altura */
-  transform: translateY(-50%); /* Ajusta la posición vertical para que estén perfectamente centrados */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%; /* Ajusta el tamaño para que ocupe un porcentaje del contenedor */
+  max-width: 200px; /* Limita el tamaño máximo */
+  height: auto;
 }
 
+
 #myCanvasLeft {
-  left: -250%; /* Ajuste relativo en lugar de píxeles */
+  left: -100%; /* Ajusta el desplazamiento */
 }
 
 #myCanvasRight {
-  right: -250%; /* Ajuste relativo en lugar de píxeles */
+  right: -100%; /* Ajusta el desplazamiento */
 }
 
 .footer .canvas-container {
   position: relative;
   width: 100%;
-  overflow: hidden; /* Evita el desbordamiento */
+  overflow: hidden;
 }
 
 .gif-container {
@@ -98,7 +82,7 @@
 }
 
 .gif-image {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -141,19 +125,19 @@ footer .col-md-3 .gif-container {
 }
 
 .rough-line-bottom {
-  width: 80%; /* Usa un porcentaje en lugar de píxeles */
+  width: 80%;
   height: 2px;
   background-color: #333;
   margin: 10px auto;
 }
 
 .line-container {
-  width: 90%; /* Ajusta al tamaño del contenedor */
-  height: 10px; /* Define la altura de la línea */
+  width: 90%;
+  height: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
-  display: inline-block; /* Asegura que el contenedor tenga un tamaño visual */
+  display: inline-block;
 }
 
 footer .text-center {
@@ -162,14 +146,78 @@ footer .text-center {
 
 .row {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos pasen a otra línea si es necesario */
-  justify-content: center; /* Centra los contenidos */
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  margin: 0; /* Elimina márgenes no deseados */
-  padding: 0; /* Asegúrate de que no haya espacio adicional */
 }
 
-
 footer p {
-  margin-bottom: 0; /* Elimina cualquier espacio innecesario en el pie de página */
+  margin-bottom: 0;
+}
+
+/* Media queries para asegurar la responsividad */
+@media (max-width: 768px) {
+  .image-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .footerintitle {
+    font-size: 1.5rem; /* Reduce el tamaño del texto */
+    margin-top: 5%;
+  }
+
+  .gif-container img {
+    max-width: 80%; /* Ajusta el tamaño de los GIFs */
+    height: auto;
+  }
+
+  .social-icons i {
+    font-size: 1.5rem; /* Reduce el tamaño de los iconos */
+  }
+
+  .row {
+    flex-direction: column; /* Hace que las columnas se apilen verticalmente */
+    align-items: center; /* Centra los elementos */
+  }
+
+  .col-md-4 {
+    width: 100%; /* Asegura que las columnas ocupen el 100% del ancho en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .col-md-12 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerintitle {
+    font-size: 1.2rem; /* Ajusta aún más el tamaño del título */
+    margin-top: 3%;
+  }
+
+  .gif-container img {
+    max-width: 70%; /* Ajuste adicional al tamaño de los GIFs */
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Ajusta un ancho máximo */
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .social-icons i {
+    font-size: 1.2rem; /* Reduce aún más el tamaño de los iconos */
+  }
+
+  footer .text-center p {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
+  }
+
+  footer .text-center h3 {
+    font-size: 18px; /* Ajuste en el tamaño del título */
+  }
 }

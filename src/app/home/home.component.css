@@ -168,17 +168,19 @@ html, body {
   .container.section-one {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar los elementos en la columna */
+    justify-content: center; /* Centrar los elementos verticalmente */
     align-items: center; /* Centrar los elementos horizontalmente */
-    height: 100%; /* Asegura que ocupe toda la altura del contenedor */
-    padding: 100px; /* Ajusta el espaciado según sea necesario */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 0; /* Eliminamos el padding general */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+  }
+  
+  .container.section-one video {
+    width: 100%; /* Asegura que el video ocupe todo el ancho */
+    height: 100%; /* Asegura que el video ocupe toda la altura */
+    object-fit: cover; /* Escala el video para cubrir completamente el contenedor */
   }
 
-  .container {
-    /*display: flex;*/
-  /* flex-direction: column; */
-    /*margin-right: 200px; */
-  }
 
   .title, .subtitle {
     display: inline-block;
@@ -275,7 +277,7 @@ html, body {
 
 /*BOTÓN*/
 
-.section-two-button, .section-four-button {
+.section-two-button {
   width: auto;
   padding: 10px 20px;
 }
@@ -367,6 +369,8 @@ html, body {
   position: relative; /* Posiciona el contenedor de manera relativa */
   width: 100%; /* Ancho completo del contenedor */
   height: 100vh; /* Altura completa de la ventana */
+  overflow: hidden; /* Oculta cualquier parte del video que sobresalga */
+  background-color: black; /* Fondo negro para evitar bordes blancos */
 }
 
 .section-three video {
@@ -437,66 +441,57 @@ html, body {
   margin-top: auto;
   align-items: center; /* Alinea verticalmente los span */
   justify-content: center; /* Centra los span horizontalmente */
-  padding: 12px 90px; /* Espaciado interno */
+  padding: 12px 5%; /* Espaciado interno relativo para pantallas pequeñas */
   border-radius: 5px; /* Bordes redondeados */
   letter-spacing: 1px; /* Añadimos espaciado entre letras */
   transition: all 0.2s ease; /* Transición suave en hover */
+  width: auto; /* Se ajusta al tamaño del contenido */
+  max-width: 90%; /* Máximo 90% del ancho de la pantalla */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
 }
 
+/* Estilos de los spans dentro del botón */
 .section-four-button span {
-  /* Establece el color de fondo para los span */
   background-color: #ef940b; /* Color de fondo naranja */
-  /* Propiedades de diseño */
   display: inline-block; /* Hace que el span se comporte como un bloque en línea */
   position: absolute; /* Permite posicionar el span de manera absoluta dentro del contenedor */
-  width: 500px; /* Ancho del span */
+  width: 60%; /* Se ajusta al 100% del ancho del contenedor */
   height: 40px; /* Altura del span */
   border-radius: 5px; /* Bordes con radio de 5px */  
   cursor: pointer; /* El puntero cambia a mano cuando se pasa por encima */
   text-align: center; /* Centra el texto dentro del span */
-  /* Tamaño de caja y padding */
   box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del elemento */
   padding: 12px 40px; /* Espaciado interno: 12px arriba y abajo, 40px a los lados */
-  /* Transiciones suaves para animación */
   -webkit-transition: all 0.3s; /* Transición para navegadores Webkit */
   transition: all 0.3s; /* Transición para todos los navegadores */
 }
 
 
 .section-four-button span:nth-child(1) {
-  -webkit-transform: rotateX(90deg);
-  -moz-transform: rotateX(90deg);
   transform: rotateX(90deg);
-  -webkit-transform-origin: 50% 50% -20px;
-  -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
 
+/* Segunda transformación del botón en hover */
 .section-four-button span:nth-child(2) {
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
-  -webkit-transform-origin: 50% 50% -20px;
-  -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
 
+/* Efectos al pasar el mouse sobre el botón */
 .section-four-button:hover span:nth-child(1) {
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
               7px 7px 20px 0px rgba(0, 0, 0, .1),
               4px 4px 5px 0px rgba(0, 0, 0, .1);
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
 
+/* Efectos al pasar el mouse sobre el segundo span */
 .section-four-button:hover span:nth-child(2) {
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
               7px 7px 20px 0px rgba(0, 0, 0, .1),
               4px 4px 5px 0px rgba(0, 0, 0, .1);
   color: transparent;
-  -webkit-transform: rotateX(-90deg);
-  -moz-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
 
@@ -530,21 +525,24 @@ html, body {
 
 .home-container.section-five {
   position: relative; /* Posiciona el contenedor de manera relativa */
-  width: 100%; /* Ancho completo del contenedor */
+  width: 100%; /* Ocupa el ancho completo de la pantalla */
   height: 100vh; /* Altura completa de la ventana */
+  overflow: hidden; /* Oculta cualquier parte del video que sobresalga */
+  background-color: black; /* Fondo negro para evitar bordes blancos */
 }
 
 .section-five video {
-  background-color: #000;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 100%; /* Ancho completo */
+  position: absolute; /* Posiciona el video para poder centrarlo */
+  top: 50%; /* Centra el video verticalmente */
+  left: 50%; /* Centra el video horizontalmente */
+  width: 100%; /* Ancho del video ajustado al contenedor */
   height: auto; /* Mantiene la relación de aspecto */
-  min-height: 100%; /* Asegura que la altura mínima sea 100% */
-  transform: translate(-50%, -50%); /* Centra el video */
-  aspect-ratio: 16 / 9; /* Proporción típica de videos */
+  min-height: 100%; /* Asegura que cubra al menos toda la altura */
+  min-width: 100%; /* Asegura que cubra al menos todo el ancho */
+  transform: translate(-50%, -50%); /* Centra el video en el contenedor */
+  object-fit: cover; /* Escala el video para cubrir todo el contenedor */
 }
+
 
 /*close section five*/
 
@@ -552,15 +550,18 @@ html, body {
 .section-six {
   background-color: #122739; /* Fondo oscuro */
   background-image: url('../../assets/home/sectionSix/background-noise.png'); /* Imagen de granito */
-  background-size: cover; /* Asegura que la imagen cubra toda la sección */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  color: #ffffff; /* Texto en blanco */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  min-height: 100vh; /* Asegura que la sección siempre ocupe al menos el 100% de la altura de la ventana */
+  overflow: hidden; /* Evitar desbordamientos */
 }
+
 
 .section-six-fullscreen {
   width: 100%;
@@ -569,13 +570,15 @@ html, body {
   padding: 0 15px; /* Para que se ajuste en pantallas pequeñas */
 }
 
-
 .section-six-title {
   font-family: 'Rosarivo', serif;
   font-size: 50px;
   letter-spacing: 3px;
   color: #ef940b;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+  overflow: hidden; /* Evita el desbordamiento del título */
+  text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 .section-six-text {
@@ -599,13 +602,12 @@ html, body {
 .section-six-content {
   display: flex;
   flex-direction: row;
-  font-family: 'Rosario', sans-serif;
   justify-content: space-around;
   align-items: center;
   width: 80%;
   margin-top: 60px;
   padding-top: 20px;
-
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
 }
 
 .section-six-left-text {
@@ -618,10 +620,11 @@ html, body {
 .section-six-right-video {
   padding: 20px;
   width: 50%;
-  height: 160%;
+  max-height: 80vh; /* Limita la altura a un porcentaje de la ventana */
   display: flex;
   justify-content: center;
-  aspect-ratio: 16 / 9; /* Proporción típica de videos */
+  aspect-ratio: 16 / 9; /* Mantiene la proporción del video */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
 }
 
 .section-six-right-video iframe {
@@ -640,7 +643,10 @@ html, body {
   box-sizing: border-box;
 }
 
-
+.section-six-left-text,
+.section-six-right-video {
+  width: 45%; /* Hace que ambos elementos ocupen 45% en pantallas grandes */
+}
 
 /*close section six*/
 
@@ -651,6 +657,8 @@ html, body {
   position: relative; /* Posiciona el contenedor de manera relativa */
   width: 100%; /* Ancho completo del contenedor */
   height: 100vh; /* Altura completa de la ventana */
+  overflow: hidden; /* Oculta cualquier parte del video que sobresalga */
+  background-color: black; /* Fondo negro para evitar bordes blancos */
 }
 
 .section-seven video {
@@ -676,14 +684,17 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Cambiar a min-height */
   color: black;
   padding: 0;
   margin: 0;
-  background-color: #0e2c2f; /* Fondo de la sección */
-  background-image: url('../../assets/home/sectionEight/background_noise.png'); /* Imagen de granito */
-  background-size: cover; /* Asegura que la imagen cubra toda la sección */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-color: #0e2c2f;
+  background-image: url('../../assets/home/sectionEight/background_noise.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Evitar que el contenido se desborde */
+  overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede */
+
 }
 
 .section-eight-title {
@@ -697,19 +708,22 @@ html, body {
 }
 
 .section-eight-content {
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   margin-top: 30px;
 }
 
 .section-eight-item {
-  margin: 15px 0;
+  margin: 10px 0; /* Ajuste del margen */
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo suave para cada item */
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   width: 90%;
   transition: transform 0.3s ease;
+  max-width: 1100px; /* Evita que los items excedan el contenedor */
+  box-sizing: border-box; /* Incluye el padding y el borde en el cálculo del tamaño */
 }
+
 
 .section-eight-item:hover {
   transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
@@ -836,12 +850,18 @@ body {
 /* Para pantallas de 768px o menos (tabletas y dispositivos móviles en orientación vertical) */
 @media screen and (max-width: 768px) {
 
+
   .home-container {
     padding: 0 10px; /* Añadir algo de espaciado lateral en pantallas más pequeñas */
   }
 
   .container.section-one {
-    padding: 40px;
+    padding: 0; /* Elimina el padding para aprovechar el espacio completo */
+    height: 100vh; /* Asegura que aún ocupe toda la ventana */
+  }
+
+  .container.section-one video {
+    object-fit: contain; /* Cambia a `contain` para evitar recortes extremos */
   }
 
   .section-two {
@@ -882,13 +902,21 @@ body {
   .section-four-text {
     font-size: 16px; /* Reduce el tamaño del texto */
   }
+  .section-five video {
+    width: 20%; /* El ancho se ajusta automáticamente */
+    height: 100%; /* Asegura que cubra la altura del contenedor */
+  }
 }
 
 /* Para pantallas de 480px o menos (móviles) */
 @media screen and (max-width: 480px) {
 
   .container.section-one {
-    padding: 20px;
+    height: 100vh; /* Mantiene el contenedor ajustado a la pantalla */
+  }
+
+  .container.section-one video {
+    object-fit: contain; /* Escala el video para que se ajuste dentro del contenedor */
   }
 
   .section-two-button {
@@ -910,6 +938,26 @@ body {
 
   .section-four-button {
     padding: 10px 30px; /* Botón más pequeño para pantallas muy pequeñas */
+  }
+
+  .section-five video {
+    width: auto; /* Escala proporcionalmente */
+    height: 100%; /* Asegura que cubra la altura mínima */
+    object-fit: contain; /* Evita recortes excesivos en proporciones muy extremas */
+  }
+
+  .section-six-content {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center;
+  }
+
+  .section-six-left-text,
+  .section-six-right-video {
+    width: 80%; /* Hace que los elementos ocupen más espacio en pantallas pequeñas */
+  }
+
+  .section-six-right-video {
+    max-height: 50vh; /* Limita la altura del video */
   }
 }
 

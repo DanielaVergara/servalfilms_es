@@ -1,24 +1,23 @@
-/* Elimina los márgenes negativos */
-.navbar ul li a {
-  margin-left: 0; /* Evita el margen negativo */
-}
-
 /* Estilo del menú */
 .navbar {
   border: 2px solid #cc7f00;
   border-radius: 50px 0 0 50px;
   white-space: nowrap;
-  width: auto; /* Ajusta al contenido */
-  max-width: 200px; /* Establecemos un ancho máximo en lugar de fijo */
+  width: 10%; /* Usar el 100% del ancho de la pantalla */
   top: 15%;
   bottom: 20%;
   overflow-y: auto;
-  max-height: calc(65vh);
   padding: 10px;
   opacity: 0.5;
-  margin-right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad */
   border-right: none;
+  box-sizing: border-box; /* Incluye el borde y padding en el ancho total */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto; /* Ajusta la altura de acuerdo al contenido */
+  overflow-x: hidden; /* Evita desbordamiento horizontal */
 }
 
 /* Para la posición fija */
@@ -29,30 +28,37 @@
   z-index: 1000;
 }
 
-
-/* Asegura que el menú se ajuste en pantallas pequeñas */
+/* Asegurarse de que el menú no deje espacio a la derecha */
 @media (max-width: 768px) {
   .navbar {
-    width: 100%; /* Usamos el 100% del ancho disponible */
-    max-width: 150px;
-    max-height: 55vh;
-    margin: 0 auto; /* Centra el menú */
-
-  }
-  .navbar .col-lg-2 .eng-es {
-    margin-top: -50px;
+    width: 15vw; /* Hace que ocupe todo el ancho de la ventana */
+    height: 50%;
+    max-width: 100%; /* Asegura que no haya un límite en el ancho */
+    margin: 0; /* Elimina márgenes para evitar desplazamientos */
+    padding: 10px 5px; /* Espaciado más pequeño */
+    box-sizing: border-box; /* Asegura que padding y bordes se incluyan */
   }
 
-  .navbar .col-lg-2 .title-serval {
-    margin-top: 30px;
-    margin-left: -20px;
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .navbar ul li {
+    width: 100%; /* Los elementos ocupan el 100% del ancho disponible */
+    text-align: center;
+    box-sizing: border-box;
   }
 
   .navbar ul li a {
-    margin: 0; /* Elimina cualquier margen no deseado */
-    padding: 10px; /* Usa relleno para el espacio interno */
+    padding: 12px 0; /* Aumenta el tamaño de los enlaces */
+    font-size: 18px;
+    display: block; /* Asegura que el enlace ocupe todo el ancho */
   }
-  
 }
 
 /* Desactivar la visibilidad cuando se oculta */
