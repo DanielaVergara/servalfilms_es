@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, HostListener } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import gsap from 'gsap';
 
 @Component({
@@ -7,6 +7,11 @@ import gsap from 'gsap';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
+
+  @ViewChild('videoPlayer') videoPlayer!: ElementRef;
+  videoSource = "../../assets/home/sectionThree/sectionThree.mp4"; // Ruta del video
+  timestamp = new Date().getTime();  // Esto asegura que el video siempre tenga una URL única
+
 
   constructor() { }
 
@@ -19,7 +24,22 @@ export class HomeComponent implements AfterViewInit {
       .from('.title', { duration: 0.5, opacity: 1, y: -40, ease: 'power3.out' })
       .from('.subtitle', { duration: 0.5, opacity: 1, y: 50, ease: 'power3.out', delay: 0.4 })
       .from('.icon', { duration: 0.5, opacity: 0, scale: 0.5, ease: 'power3.out' }, 2); 
+
+      const video = this.videoPlayer.nativeElement;
+
+      this.resetVideo();
+
+
+      
   }
+
+  resetVideo() {
+    const videoElement = this.videoPlayer.nativeElement;
+    videoElement.currentTime = 0;  // Reiniciar el video a su inicio
+    videoElement.load();           // Forzar recarga del video
+    videoElement.play();           // Reproducir desde el principio
+  }
+
 
  /* @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {

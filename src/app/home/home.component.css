@@ -1,6 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
   .home-container {
     position: relative;
     color: black; /* Color del texto sobre la imagen */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho */
     height: 100vh; /* Ocupa el 100% del alto de la pantalla */
     display: flex; /* Usar flexbox para ajustar el contenido */
     box-sizing: border-box; /* Incluye padding y border en el ancho total */
@@ -18,7 +30,7 @@
     width: 100%;
     height: 15vh;
     overflow: hidden;
-  }
+  }  
 
   .divider-eight {
     background: linear-gradient(
@@ -54,8 +66,6 @@
       #020e19 66%,  
       #020e19 100%
     );
-    height: 15vh;
-    width: 100%;
   }
 
   .divider-five {
@@ -216,7 +226,7 @@
     width: 300%;
     padding: 0;
     margin: 0;
-    max-width: 1000px;
+    max-width: 90%;
     text-align: center; 
   }
 
@@ -225,7 +235,7 @@
     background-image: url('../../assets/home/sectiontwo/background_noise.png'); /* Imagen de granito */
     background-size: cover; /* Asegura que la imagen cubra toda la sección */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -255,7 +265,8 @@
   font-family: 'Rosario', sans-serif; /* Aplica Rosario */
 
   font-size: 22px;
-    max-width: 1000px;
+  max-width: 90%;
+
     text-align: justify;
     color: #eff8f8; /* Color del texto */
     margin: 20px 0;
@@ -264,6 +275,10 @@
 
 /*BOTÓN*/
 
+.section-two-button, .section-four-button {
+  width: auto;
+  padding: 10px 20px;
+}
 
 .section-two-button {
   font-family: 'Cinzel Decorative', serif; /* Fuente Cinzel Decorative */
@@ -363,6 +378,7 @@
   height: auto; /* Mantiene la relación de aspecto */
   min-height: 100%; /* Asegura que la altura mínima sea 100% */
   transform: translate(-50%, -50%); /* Centra el video */
+  aspect-ratio: 16 / 9; /* Proporción típica de videos */
 }
 
 /*close section three*/
@@ -372,6 +388,8 @@
 
 
 /* SECCIÓN CUATRO */
+
+
 
 .section-four {
   min-height: 80vh; /* Esto hace que la sección ocupe al menos el 80% de la altura de la pantalla */
@@ -525,6 +543,7 @@
   height: auto; /* Mantiene la relación de aspecto */
   min-height: 100%; /* Asegura que la altura mínima sea 100% */
   transform: translate(-50%, -50%); /* Centra el video */
+  aspect-ratio: 16 / 9; /* Proporción típica de videos */
 }
 
 /*close section five*/
@@ -536,7 +555,7 @@
   background-size: cover; /* Asegura que la imagen cubra toda la sección */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   color: #ffffff; /* Texto en blanco */
-  padding: 90px 0;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -544,9 +563,12 @@
 }
 
 .section-six-fullscreen {
-  width: 80%;
+  width: 100%;
+  max-width: 1200px; /* Ajusta según tu diseño */
   margin: 0 auto;
+  padding: 0 15px; /* Para que se ajuste en pantallas pequeñas */
 }
+
 
 .section-six-title {
   font-family: 'Rosarivo', serif;
@@ -599,6 +621,7 @@
   height: 160%;
   display: flex;
   justify-content: center;
+  aspect-ratio: 16 / 9; /* Proporción típica de videos */
 }
 
 .section-six-right-video iframe {
@@ -609,6 +632,13 @@
   border-radius: 8px;
 }
 
+.title-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; /* Oculta contenido que se desborde */
+  padding: 0 15px; /* Espaciado interno adaptativo */
+  box-sizing: border-box;
+}
 
 
 
@@ -787,15 +817,6 @@ body {
     margin-top: 10px; 
   }
 
-  @media (max-width: 768px) {
-
-    .justified-text {
-      overflow-y: auto; 
-      max-height: 300px; 
-
-    }
-
-  }
 
   @keyframes textAnimate {
     0% {
@@ -812,5 +833,153 @@ body {
 
 
   /*MOBILE*/
+/* Para pantallas de 768px o menos (tabletas y dispositivos móviles en orientación vertical) */
+@media screen and (max-width: 768px) {
+
+  .home-container {
+    padding: 0 10px; /* Añadir algo de espaciado lateral en pantallas más pequeñas */
+  }
+
+  .container.section-one {
+    padding: 40px;
+  }
+
+  .section-two {
+    padding: 15px; /* Reduce el padding para las pantallas más pequeñas */
+  }
+
+  .section-two-text {
+    font-size: 18px; /* Reduce el tamaño del texto */
+    text-align: left; /* Cambia la alineación del texto para una lectura más fácil en móviles */
+  }
+
+  .section-two-button {
+    padding: 10px 50px; /* Reduce el tamaño del botón */
+  }
+
+  .section-three video {
+    min-height: 100vh; /* Asegura que el video ocupe el 100% de la altura en pantallas más pequeñas */
+  }
+
+  .section-four {
+    flex-direction: column; /* Apilar el contenido en lugar de usar la fila */
+    padding: 20px;
+  }
+
+  .section-four-content {
+    flex-direction: column;
+    gap: 30px; /* Reduce el espacio entre los elementos */
+  }
+
+  .section-four-button {
+    width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
+  }
+
+  .section-four-title {
+    font-size: 28px; /* Reduce el tamaño del título */
+  }
+
+  .section-four-text {
+    font-size: 16px; /* Reduce el tamaño del texto */
+  }
+}
+
+/* Para pantallas de 480px o menos (móviles) */
+@media screen and (max-width: 480px) {
+
+  .container.section-one {
+    padding: 20px;
+  }
+
+  .section-two-button {
+    padding: 10px 30px; /* Botón aún más pequeño */
+  }
+
+  .section-two-text {
+    font-size: 16px; /* Texto más pequeño en móviles */
+  }
+
+  .section-four {
+    padding: 10px;
+  }
+
+  .section-four-content {
+    flex-direction: column;
+    gap: 15px; /* Reduce el espacio entre los elementos */
+  }
+
+  .section-four-button {
+    padding: 10px 30px; /* Botón más pequeño para pantallas muy pequeñas */
+  }
+}
+
+/* Para pantallas de 1024px o más (escritorios y tabletas en horizontal) */
+@media screen and (min-width: 1024px) {
+
+  .section-two {
+    padding: 40px;
+  }
+
+  .section-two-text {
+    font-size: 24px;
+  }
+
+  .section-four-content {
+    gap: 50px; /* Espacio más grande entre los elementos */
+  }
+
+  .section-four-button {
+    padding: 15px 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title, .subtitle {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+
+  .section-two-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-two-image {
+    width: 80%; /* Relativo al contenedor */
+    max-width: 300px; /* Límite */
+  }
+  .section-two-button, .section-four-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .section-three video {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-four {
+    flex-direction: column;
+    height: auto; /* Permite crecer según el contenido */
+    padding: 20px;
+  }
+
+  .section-four-content {
+    gap: 20px; /* Reduce el espacio */
+    flex-direction: column;
+  }
+
+  .section-four-text-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title, .subtitle {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+}
+
 
   
