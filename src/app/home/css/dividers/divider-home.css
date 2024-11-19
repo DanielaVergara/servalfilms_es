@@ -1,0 +1,114 @@
+.divider {
+    width: 100%;
+    height: 15vh;
+    overflow: hidden;
+  }  
+
+  .divider-eight {
+    background: linear-gradient(
+        to bottom,
+        #042426 0%,   
+        #042426 33%,  
+        #00191b 33%, 
+        #00191b 66%, 
+        #001214 66%,  
+        #001214 100%
+    );
+  }
+
+  .divider-seven {
+    background: linear-gradient(
+        to bottom,
+        #001214 0%,   
+        #001214 33%,  
+        #00191b 33%, 
+        #00191b 66%, 
+        #042426 66%,  
+        #042426 100%
+    );
+  }
+
+  .divider-six {
+    background: linear-gradient(
+      to bottom,
+      #0a1c2b 0%,   
+      #0a1c2b 33%,  
+      #071724 33%, 
+      #071724 66%, 
+      #020e19 66%,  
+      #020e19 100%
+    );
+  }
+
+  .divider-five {
+    background: linear-gradient(
+        to bottom,
+        #020e19 0%,   
+        #020e19 33%,  
+        #071724 33%, 
+        #071724 66%, 
+        #0a1c2b 66%,  
+        #0a1c2b 100%
+    );
+  }
+
+  .divider-four {
+    background: linear-gradient(
+        to bottom,
+        #310b34 0%,   
+        #310b34 33%,  
+        #28042b 33%, 
+        #28042b 66%, 
+        #1d021f 66%,  
+        #1d021f  100%
+    );
+  }
+
+
+  .divider-three {
+    background: linear-gradient(
+        to bottom,
+        #1d021f 0%,   
+        #1d021f 33%,  
+        #28042b 33%, 
+        #28042b 66%, 
+        #310b34 66%,  
+        #310b34  100%
+    );
+  }
+
+
+  .divider-two {
+   /* background: linear-gradient(
+        to bottom,
+        #560a2c 0%,   
+        #560a2c 33%,  
+        #440823 33%, 
+        #440823 66%, 
+        #260414 66%,  
+        #260414 100%
+    );*/
+    background-color: #260414;
+    background-image: linear-gradient( to bottom,
+    #560a2c 0%,   
+    #560a2c 33%,  
+    #440823 33%, 
+    #440823 66%, 
+    #260414 66%,  
+    #260414 100%), url('../../../../assets/home/sectiontwo/divider_noise.png');
+    /*background-image: url('../../assets/home/sectiontwo/background_noise.png'); *//* Imagen de granito */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }
+
+  .divider-one {
+    background: linear-gradient(
+      to bottom,
+      #260414 0%, 
+      #260414 33%, 
+      #440823 33%, 
+      #440823 66%,
+      #560a2c 66%,
+      #560a2c 100%
+    );
+  }

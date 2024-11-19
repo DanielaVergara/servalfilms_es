@@ -1,0 +1,180 @@
+/* SECCIÓN CUATRO */
+
+.section-four {
+    min-height: 80vh; /* Esto hace que la sección ocupe al menos el 80% de la altura de la pantalla */
+    background-color: #3e0f42; /* Fondo en el mismo tono que la sección dos */
+    background-image: url('../../../../assets/home/sectionFour/background_noise.png'); /* Imagen de granito */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    justify-content: space-between; /* Alinea el contenido: espacio entre los elementos */
+    align-items: center; /* Centra el contenido en el eje horizontal */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  }
+  
+  
+  .section-four-content {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    max-width: 1200px;
+    flex-grow: 1; /* Hace que esta sección crezca y ocupe el espacio disponible */
+  }
+  
+  .section-four-text-container {
+    max-width: 500px;
+    color: #eff8f8;
+  }
+  
+  .section-four-title {
+    font-family: 'Rosario', sans-serif;
+    color: #ef940b;
+    padding-bottom: 15px;
+  }
+  
+  .section-four-text {
+    margin: 10px 0;
+  }
+  
+  
+  .section-four-button {
+    font-family: 'Cinzel Decorative', serif; /* Fuente Cinzel Decorative */
+    display: flex;
+    align-self: center; /* Centra el botón en la parte inferior */
+    margin-top: auto;
+    align-items: center; /* Alinea verticalmente los span */
+    justify-content: center; /* Centra los span horizontalmente */
+    padding: 12px 5%; /* Espaciado interno relativo para pantallas pequeñas */
+    border-radius: 5px; /* Bordes redondeados */
+    letter-spacing: 1px; /* Añadimos espaciado entre letras */
+    transition: all 0.2s ease; /* Transición suave en hover */
+    width: auto; /* Se ajusta al tamaño del contenido */
+    max-width: 90%; /* Máximo 90% del ancho de la pantalla */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+  }
+  
+  /* Estilos de los spans dentro del botón */
+  .section-four-button span {
+    background-color: #ef940b; /* Color de fondo naranja */
+    display: inline-block; /* Hace que el span se comporte como un bloque en línea */
+    position: absolute; /* Permite posicionar el span de manera absoluta dentro del contenedor */
+    width: 60%; /* Se ajusta al 100% del ancho del contenedor */
+    height: 40px; /* Altura del span */
+    border-radius: 5px; /* Bordes con radio de 5px */  
+    cursor: pointer; /* El puntero cambia a mano cuando se pasa por encima */
+    text-align: center; /* Centra el texto dentro del span */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del elemento */
+    padding: 12px 40px; /* Espaciado interno: 12px arriba y abajo, 40px a los lados */
+    -webkit-transition: all 0.3s; /* Transición para navegadores Webkit */
+    transition: all 0.3s; /* Transición para todos los navegadores */
+  }
+  
+  
+  .section-four-button span:nth-child(1) {
+    transform: rotateX(90deg);
+    transform-origin: 50% 50% -20px;
+  }
+  
+  /* Segunda transformación del botón en hover */
+  .section-four-button span:nth-child(2) {
+    transform: rotateX(0deg);
+    transform-origin: 50% 50% -20px;
+  }
+  
+  /* Efectos al pasar el mouse sobre el botón */
+  .section-four-button:hover span:nth-child(1) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transform: rotateX(0deg);
+  }
+  
+  /* Efectos al pasar el mouse sobre el segundo span */
+  .section-four-button:hover span:nth-child(2) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+                7px 7px 20px 0px rgba(0, 0, 0, .1),
+                4px 4px 5px 0px rgba(0, 0, 0, .1);
+    color: transparent;
+    transform: rotateX(-90deg);
+  }
+  
+
+  .section-four-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .section-four-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #cc7f00;
+    transition: transform 0.3s ease;
+  }
+  
+  .section-four-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  .section-four .title {
+    margin-top: 10px; 
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .section-four {
+        flex-direction: column; /* Apilar el contenido en lugar de usar la fila */
+        padding: 20px;
+      }
+    
+      .section-four-content {
+        flex-direction: column;
+        gap: 30px; /* Reduce el espacio entre los elementos */
+      }
+    
+      .section-four-button {
+        width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
+      }
+    
+      .section-four-title {
+        font-size: 28px; /* Reduce el tamaño del título */
+      }
+    
+      .section-four-text {
+        font-size: 16px; /* Reduce el tamaño del texto */
+      }
+
+
+      .section-four {
+        flex-direction: column;
+        height: auto; /* Permite crecer según el contenido */
+        padding: 20px;
+      }
+    
+      .section-four-content {
+        gap: 20px; /* Reduce el espacio */
+        flex-direction: column;
+      }
+    
+      .section-four-text-container {
+        max-width: 100%;
+      }
+  }
+
+  /* Para pantallas de 1024px o más (escritorios y tabletas en horizontal) */
+@media screen and (min-width: 1024px) {
+
+
+    .section-four-content {
+      gap: 50px; /* Espacio más grande entre los elementos */
+    }
+  
+    .section-four-button {
+      padding: 15px 80px;
+    }
+  }

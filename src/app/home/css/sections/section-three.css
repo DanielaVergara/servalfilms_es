@@ -1,0 +1,48 @@
+.section-three .title {
+    margin-top: 0px; 
+    padding-top: 0%;
+  }
+
+  .section-three {
+    margin-top: 0px; 
+    padding-top: 0%;
+    background-color: #440823;
+  }
+
+  .home-container.section-three {
+    position: relative; /* Posiciona el contenedor de manera relativa */
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100vh; /* Altura completa de la ventana */
+    overflow: hidden; /* Oculta cualquier parte del video que sobresalga */
+    background-color: black; /* Fondo negro para evitar bordes blancos */
+  }
+  
+  .section-three video {
+    background-color: #000;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Ancho completo */
+    height: auto; /* Mantiene la relación de aspecto */
+    min-height: 100%; /* Asegura que la altura mínima sea 100% */
+    transform: translate(-50%, -50%); /* Centra el video */
+    aspect-ratio: 16 / 9; /* Proporción típica de videos */
+  }
+  
+  /*close section three*/
+
+  @media screen and (max-width: 768px) {
+
+    .section-three video {
+      min-height: 100vh; /* Asegura que el video ocupe el 100% de la altura en pantallas más pequeñas */
+    }  
+}
+
+@media (max-width: 768px) {
+    .section-three video {
+      width: 100%;
+      height: auto;
+    }
+}
+  
+

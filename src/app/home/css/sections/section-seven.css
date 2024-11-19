@@ -1,0 +1,23 @@
+/*section seven*/
+
+
+.home-container.section-seven {
+    position: relative; /* Posiciona el contenedor de manera relativa */
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100vh; /* Altura completa de la ventana */
+    overflow: hidden; /* Oculta cualquier parte del video que sobresalga */
+    background-color: black; /* Fondo negro para evitar bordes blancos */
+  }
+  
+  .section-seven video {
+    background-color: #000;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Ancho completo */
+    height: auto; /* Mantiene la relación de aspecto */
+    min-height: 100%; /* Asegura que la altura mínima sea 100% */
+    transform: translate(-50%, -50%); /* Centra el video */
+  }
+  
+  /*close section seven*/

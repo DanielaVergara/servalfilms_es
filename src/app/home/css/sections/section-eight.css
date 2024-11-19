@@ -1,0 +1,86 @@
+/*section eight*/
+
+/* Estructura general de la sección */
+.home-container.section-eight {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiar a min-height */
+    color: black;
+    padding: 0;
+    margin: 0;
+    background-color: #0e2c2f;
+    background-image: url('../../../../assets/home/sectionEight/background_noise.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Evitar que el contenido se desborde */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede */
+  
+  }
+  
+  .section-eight-title {
+    text-align: left;
+    align-content: baseline;
+    font-size: 36px;
+    font-family: 'Rosarivo', serif;
+    color: #ef940b;
+    letter-spacing: 4px;
+    margin-bottom: 70px;
+  }
+  
+  .section-eight-content {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+  }
+  
+  .section-eight-item {
+    margin: 10px 0; /* Ajuste del margen */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 90%;
+    transition: transform 0.3s ease;
+    max-width: 1100px; /* Evita que los items excedan el contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el cálculo del tamaño */
+  }
+  
+  
+  .section-eight-item:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+  }
+  
+  .section-eight-text {
+    font-family: 'Rosario', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .section-eight-hover-text {
+    text-align: left;
+    display: none;
+    font-size: 17px;
+    font-family: 'Rosario', sans-serif;
+    color: #ef940b; /* Color para el hover */
+  }
+  
+  .section-eight-item:hover .section-eight-hover-text {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .section-eight-divider {
+    height: 5px; /* Aumenta el grosor de la línea */
+    width: 85%;
+    background-color: rgb(153, 140, 20); /* Color de la línea */
+    border: none; /* Elimina cualquier borde predeterminado */
+    margin: 20px 0; /* Ajusta el espacio alrededor del <hr> */
+  }
+
+  .section-eight-title {
+    text-align: left  ;  /* Alinea el h2 a la derecha */
+    font-size: 60px;
+  }  

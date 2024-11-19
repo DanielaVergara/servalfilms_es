@@ -1,0 +1,197 @@
+/*section two*/
+
+.title-wrapper {
+    width: 300%;
+    padding: 0;
+    margin: 0;
+    max-width: 90%;
+    text-align: center; 
+  }
+
+  .section-two {
+    background-color: #6d0a37; /* Color de fondo */
+    background-image: url('../../../../assets/home/sectiontwo/background_noise.png'); /* Imagen de granito */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Aumenté el padding para más espacio */
+    margin: 0;
+}
+
+.section-two-images {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 20px; /* Agrega espacio entre las imágenes */
+}
+
+.section-two-image {
+    border-radius: 5px;
+    width: 280px; /* Tamaño de las imágenes */
+    transition: transform 0.3s ease; /* Transición para el zoom */
+    object-fit: cover;
+    border: 2px solid #cc7f00;
+}
+
+.section-two-text {
+  font-family: 'Rosario', sans-serif; /* Aplica Rosario */
+
+  font-size: 22px;
+  max-width: 90%;
+
+    text-align: justify;
+    color: #eff8f8; /* Color del texto */
+    margin: 20px 0;
+    font-family: "Rosario"; /* Fuente */
+}
+
+/*BOTÓN*/
+
+.section-two-button {
+  width: auto;
+  padding: 10px 20px;
+}
+
+.section-two-button {
+  font-family: 'Cinzel Decorative', serif; /* Fuente Cinzel Decorative */
+  display: flex;
+  align-items: center; /* Alinea verticalmente los span */
+  justify-content: center; /* Centra los span horizontalmente */
+  padding: 12px 90px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  letter-spacing: 1px; /* Añadimos espaciado entre letras */
+  transition: all 0.2s ease; /* Transición suave en hover */
+}
+
+.section-two-button span {
+  /* Establece el color de fondo para los span */
+  background-color: #ef940b; /* Color de fondo naranja */
+  /* Propiedades de diseño */
+  display: inline-block; /* Hace que el span se comporte como un bloque en línea */
+  position: absolute; /* Permite posicionar el span de manera absoluta dentro del contenedor */
+  width: 500px; /* Ancho del span */
+  height: 40px; /* Altura del span */
+  border-radius: 5px; /* Bordes con radio de 5px */  
+  cursor: pointer; /* El puntero cambia a mano cuando se pasa por encima */
+  text-align: center; /* Centra el texto dentro del span */
+  /* Tamaño de caja y padding */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del elemento */
+  padding: 12px 40px; /* Espaciado interno: 12px arriba y abajo, 40px a los lados */
+  /* Transiciones suaves para animación */
+  -webkit-transition: all 0.3s; /* Transición para navegadores Webkit */
+  transition: all 0.3s; /* Transición para todos los navegadores */
+}
+
+
+.section-two-button span:nth-child(1) {
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+
+.section-two-button span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+
+.section-two-button:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+              7px 7px 20px 0px rgba(0, 0, 0, .1),
+              4px 4px 5px 0px rgba(0, 0, 0, .1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.section-two-button:hover span:nth-child(2) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+              7px 7px 20px 0px rgba(0, 0, 0, .1),
+              4px 4px 5px 0px rgba(0, 0, 0, .1);
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+/*CLOSE BOTON*/
+
+
+
+.image-link:hover .section-two-image {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
+}
+  /*close section two */
+
+
+  @media screen and (max-width: 768px) {
+    .section-two {
+        padding: 15px; /* Reduce el padding para las pantallas más pequeñas */
+      }
+    
+      .section-two-text {
+        font-size: 18px; /* Reduce el tamaño del texto */
+        text-align: left; /* Cambia la alineación del texto para una lectura más fácil en móviles */
+      }
+
+      
+    
+      .section-two-button {
+        padding: 10px 50px; /* Reduce el tamaño del botón */
+      }
+
+      .title, .subtitle {
+        font-size: 40px;
+        letter-spacing: 4px;
+      }
+    
+      .section-two-images {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    
+      .section-two-image {
+        width: 80%; /* Relativo al contenedor */
+        max-width: 300px; /* Límite */
+      }
+      .section-two-button, .section-four-button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .section-two-button {
+      padding: 10px 30px; /* Botón aún más pequeño */
+    }
+  
+    .section-two-text {
+      font-size: 16px; /* Texto más pequeño en móviles */
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+
+    .section-two {
+      padding: 40px;
+    }
+  
+    .section-two-text {
+      font-size: 24px;
+    }
+}
