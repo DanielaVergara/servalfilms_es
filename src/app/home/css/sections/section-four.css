@@ -30,8 +30,11 @@
   
   .section-four-title {
     font-family: 'Rosario', sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2.25rem); /* Escala dinámicamente entre 1.5rem y 2.25rem */
     color: #ef940b;
     padding-bottom: 15px;
+    text-align: center; /* Centra el texto */
+    margin-bottom: 1rem; /* Espaciado relativo inferior */
   }
   
   .section-four-text {
@@ -43,14 +46,14 @@
     font-family: 'Cinzel Decorative', serif; /* Fuente Cinzel Decorative */
     display: flex;
     align-self: center; /* Centra el botón en la parte inferior */
-    margin-top: auto;
+    margin-top: 2rem; /* Usa rem para espaciado relativo */
     align-items: center; /* Alinea verticalmente los span */
     justify-content: center; /* Centra los span horizontalmente */
-    padding: 12px 5%; /* Espaciado interno relativo para pantallas pequeñas */
+    padding: 10px 5%; /* Mantén el relleno proporcional */
     border-radius: 5px; /* Bordes redondeados */
     letter-spacing: 1px; /* Añadimos espaciado entre letras */
     transition: all 0.2s ease; /* Transición suave en hover */
-    width: auto; /* Se ajusta al tamaño del contenido */
+    width: 90%; /* Haz que ocupe el 90% del ancho del contenedor */
     max-width: 90%; /* Máximo 90% del ancho de la pantalla */
     box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
   }
@@ -108,7 +111,8 @@
   }
   
   .section-four-image {
-    width: 200px;
+    width: 100%; /* Ocuparán el ancho disponible */
+    max-width: 200px; /* Limita el tamaño máximo */
     height: auto;
     border-radius: 10px;
     border: 2px solid #cc7f00;
@@ -128,13 +132,16 @@
 
   @media screen and (max-width: 768px) {
     .section-four {
+       margin-top: 100rem; /* Reduce el espacio superior */
         flex-direction: column; /* Apilar el contenido en lugar de usar la fila */
         padding: 20px;
+        height: auto; /* Permite que la altura dependa del contenido */
+        min-height: 80vh; /* Para mantener coherencia en el diseño */
       }
     
       .section-four-content {
-        flex-direction: column;
-        gap: 30px; /* Reduce el espacio entre los elementos */
+        gap: 20px; /* Reduce el espacio entre elementos */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
       }
     
       .section-four-button {
@@ -162,7 +169,8 @@
       }
     
       .section-four-text-container {
-        max-width: 100%;
+        text-align: center; /* Alinea el texto en el centro */
+        max-width: 100%; /* Permite que el texto ocupe todo el ancho disponible */
       }
   }
 
@@ -178,3 +186,13 @@
       padding: 15px 80px;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    .section-four-title {
+      font-size: 20px;
+    }
+    .section-four-text {
+      font-size: 14px;
+    }
+  }
+  
