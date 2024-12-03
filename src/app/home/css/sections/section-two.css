@@ -1,197 +1,171 @@
-/*section two*/
+/* section two */
+.home-container.section-two {
+  background-color: #6d0a37;
+  background-image: url('../../../../assets/home/sectiontwo/background_noise.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
-.title-wrapper {
-    width: 300%;
-    padding: 0;
-    margin: 0;
-    max-width: 90%;
-    text-align: center; 
-  }
+.svg-title {
+  font-family: 'Rosarivo';
+  font-size: 40px;
+  fill: #ef940b;
+  letter-spacing: 2px;
+  padding-bottom: 100px; /* Este padding no afectará al texto, ya que el padding generalmente se aplica a contenedores */
+}
 
-  .section-two {
-    background-color: #6d0a37; /* Color de fondo */
-    background-image: url('../../../../assets/home/sectiontwo/background_noise.png'); /* Imagen de granito */
-    background-size: cover; /* Asegura que la imagen cubra toda la sección */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* Aumenté el padding para más espacio */
-    margin: 0;
+
+.title-wrapper.section-two-title {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.svg-text {
+  font-family: 'Rosarivo', sans-serif;
+  font-size: 5vw; /* Tamaño relativo con vw para la fuente */
+  fill: #ef940b;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: #ef940b;
+  max-font-size: 60px; /* Limitar el tamaño máximo */
 }
 
 .section-two-images {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    gap: 20px; /* Agrega espacio entre las imágenes */
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .section-two-image {
-    border-radius: 5px;
-    width: 280px; /* Tamaño de las imágenes */
-    transition: transform 0.3s ease; /* Transición para el zoom */
-    object-fit: cover;
-    border: 2px solid #cc7f00;
+  width: 280px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  border: 2px solid #cc7f00;
+  transition: transform 0.3s ease;
+  margin: 10px;
 }
 
 .section-two-text {
-  font-family: 'Rosario', sans-serif; /* Aplica Rosario */
-
-  font-size: 22px;
+  font-family: 'Rosario', sans-serif;
+  font-size: 24px;
   max-width: 90%;
-
-    text-align: justify;
-    color: #eff8f8; /* Color del texto */
-    margin: 20px 0;
-    font-family: "Rosario"; /* Fuente */
+  text-align: justify;
+  color: #eff8f8;
+  margin: 20px 0;
 }
 
-/*BOTÓN*/
-
-.section-two-button {
-  width: auto;
-  padding: 10px 20px;
-}
-
-.section-two-button {
-  font-family: 'Cinzel Decorative', serif; /* Fuente Cinzel Decorative */
+.section-two-button-container {
   display: flex;
-  align-items: center; /* Alinea verticalmente los span */
-  justify-content: center; /* Centra los span horizontalmente */
-  padding: 12px 90px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  letter-spacing: 1px; /* Añadimos espaciado entre letras */
-  transition: all 0.2s ease; /* Transición suave en hover */
+  justify-content: center;
+  width: 100%;
+}
+
+.section-two-button {
+  font-family: 'Cinzel Decorative', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 90px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
 }
 
 .section-two-button span {
-  /* Establece el color de fondo para los span */
-  background-color: #ef940b; /* Color de fondo naranja */
-  /* Propiedades de diseño */
-  display: inline-block; /* Hace que el span se comporte como un bloque en línea */
-  position: absolute; /* Permite posicionar el span de manera absoluta dentro del contenedor */
-  width: 500px; /* Ancho del span */
-  height: 40px; /* Altura del span */
-  border-radius: 5px; /* Bordes con radio de 5px */  
-  cursor: pointer; /* El puntero cambia a mano cuando se pasa por encima */
-  text-align: center; /* Centra el texto dentro del span */
-  /* Tamaño de caja y padding */
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del elemento */
-  padding: 12px 40px; /* Espaciado interno: 12px arriba y abajo, 40px a los lados */
-  /* Transiciones suaves para animación */
-  -webkit-transition: all 0.3s; /* Transición para navegadores Webkit */
-  transition: all 0.3s; /* Transición para todos los navegadores */
+  background-color: #ef940b;
+  display: inline-block;
+  position: absolute;
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  padding: 12px 40px;
+  box-sizing: border-box;
+  transition: all 0.3s;
 }
 
-
 .section-two-button span:nth-child(1) {
-  -webkit-transform: rotateX(90deg);
-  -moz-transform: rotateX(90deg);
   transform: rotateX(90deg);
-  -webkit-transform-origin: 50% 50% -20px;
-  -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
 
 .section-two-button span:nth-child(2) {
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
-  -webkit-transform-origin: 50% 50% -20px;
-  -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
 
 .section-two-button:hover span:nth-child(1) {
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-              7px 7px 20px 0px rgba(0, 0, 0, .1),
-              4px 4px 5px 0px rgba(0, 0, 0, .1);
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
 
 .section-two-button:hover span:nth-child(2) {
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-              7px 7px 20px 0px rgba(0, 0, 0, .1),
-              4px 4px 5px 0px rgba(0, 0, 0, .1);
   color: transparent;
-  -webkit-transform: rotateX(-90deg);
-  -moz-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
 
-/*CLOSE BOTON*/
-
-
-
 .image-link:hover .section-two-image {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-  /*close section two */
 
-
-  @media screen and (max-width: 768px) {
-    .section-two {
-        padding: 15px; /* Reduce el padding para las pantallas más pequeñas */
-      }
-    
-      .section-two-text {
-        font-size: 18px; /* Reduce el tamaño del texto */
-        text-align: left; /* Cambia la alineación del texto para una lectura más fácil en móviles */
-      }
-
-      
-    
-      .section-two-button {
-        padding: 10px 50px; /* Reduce el tamaño del botón */
-      }
-
-      .title, .subtitle {
-        font-size: 40px;
-        letter-spacing: 4px;
-      }
-    
-      .section-two-images {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-    
-      .section-two-image {
-        width: 80%; /* Relativo al contenedor */
-        max-width: 300px; /* Límite */
-      }
-      .section-two-button, .section-four-button {
-        font-size: 14px;
-        padding: 8px 16px;
-      }
+/* Responsive: Ajustes para dispositivos móviles y tabletas */
+@media screen and (max-width: 768px) {
+  .svg-text {
+    font-size: 8vw; /* Título más pequeño en pantallas más pequeñas */
+    max-font-size: 50px; /* Límite en pantallas más pequeñas */
   }
 
-  @media screen and (max-width: 480px) {
-
-    .section-two-button {
-      padding: 10px 30px; /* Botón aún más pequeño */
-    }
-  
-    .section-two-text {
-      font-size: 16px; /* Texto más pequeño en móviles */
-    }
+  .section-two-text {
+    font-size: 18px;
   }
-  
-  @media screen and (min-width: 1024px) {
 
-    .section-two {
-      padding: 40px;
-    }
-  
-    .section-two-text {
-      font-size: 24px;
-    }
+  .section-two-image {
+    width: 80%;
+    max-width: 280px;
+  }
+
+  .section-two-button {
+    padding: 10px 50px;
+  }
+
+  .section-two-button span {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .svg-text {
+    font-size: 10vw; /* Ajusta el tamaño aún más en pantallas más pequeñas */
+    max-font-size: 40px; /* Límite para dispositivos móviles */
+  }
+
+  .section-two-button {
+    padding: 10px 30px;
+  }
+
+  .section-two-text {
+    font-size: 16px;
+  }
+
+  .section-two-image {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .section-two-button span {
+    width: 250px;
+  }
 }

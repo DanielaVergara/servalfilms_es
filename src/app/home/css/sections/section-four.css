@@ -27,14 +27,29 @@
     max-width: 500px;
     color: #eff8f8;
   }
+
+  .section-four-design{
+    font-family: 'Rosarivo'; 
+    font-size: 40px;
+     fill: #ef940b; 
+     letter-spacing: 2px; 
+     padding-bottom: 100px;
+  }
   
   .section-four-title {
     font-family: 'Rosario', sans-serif;
-    font-size: clamp(1.5rem, 5vw, 2.25rem); /* Escala dinámicamente entre 1.5rem y 2.25rem */
+    font-size: clamp(1.5rem, 80vw, 2.25rem); /* Escala dinámicamente entre 1.5rem y 2.25rem */
     color: #ef940b;
     padding-bottom: 15px;
     text-align: center; /* Centra el texto */
     margin-bottom: 1rem; /* Espaciado relativo inferior */
+
+
+    font-family: 'Rosarivo'; 
+    font-size: 40px;
+     fill: #ef940b; 
+     letter-spacing: 2px; 
+     padding-bottom: 100px;
   }
   
   .section-four-text {
@@ -149,7 +164,7 @@
       }
     
       .section-four-title {
-        font-size: 28px; /* Reduce el tamaño del título */
+        font-size: 60px; /* Reduce el tamaño del título */
       }
     
       .section-four-text {
@@ -189,7 +204,7 @@
 
   @media screen and (max-width: 480px) {
     .section-four-title {
-      font-size: 20px;
+      font-size: 50px;
     }
     .section-four-text {
       font-size: 14px;

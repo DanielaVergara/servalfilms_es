@@ -12,14 +12,14 @@
 <div class="divider divider-one">
 </div>
 <div class="home-container section-two"> <!-- Sección específica -->
-  <div class="title-wrapper section-two-title"> <!-- Título con clase específica -->
+  <div class="title-wrapper section-two-title">
     <svg class="title-svg" viewBox="0 0 1200 100">
       <text x="60%" y="60%" text-anchor="middle" dominant-baseline="middle" style="font-family: 'Rosarivo'; font-size: 40px; fill: #ef940b; letter-spacing: 2px; padding-bottom: 100px">
         <tspan x="50%" dy="-0.8em">Descubre nuestras películas cortas en progreso,</tspan>
         <tspan x="50%" dy="1.2em">conoce el paso a paso de sus procesos.</tspan>
       </text>
     </svg>
-  </div>
+  </div>  
   <div class="images-container section-two-images"> <!-- Contenedor de imágenes con clase específica -->
     <a href="link-a-teaser-amor-en" class="image-link">
       <img src="../../assets/home/sectiontwo/amorEn.jpg" alt="Amor en" class="image section-two-image aos-zoom"> <!-- Imagen con clase específica -->
@@ -34,7 +34,7 @@
     <p>Producimos películas live-action, y nos apasionan los videos clips y los podcasts.</p>
   </div>
   <div class="section-two-button-container">
-    <button class="section-two-button">
+    <button class="section-two-button" routerLink="/portafolio" fragment="top">
       <span>Click aquí</span>
       <span>Explora nuestro Portafolio</span>
     </button>
@@ -53,9 +53,9 @@
 <div class="home-container section-four">
   <div class="section-four-content">
     <div class="section-four-text-container">
-      <div class="title-wrapper section-four-title"> <!-- Título con clase específica -->
-        <svg class="title-svg" viewBox="0 0 1200 100">
-          <text x="60%" y="60%" text-anchor="middle" dominant-baseline="middle" style="font-family: 'Rosarivo'; font-size: 40px; fill: #ef940b; letter-spacing: 2px; padding-bottom: 100px; ">
+      <div class="title-wrapper section-four-title section-four-design"> <!-- Título con clase específica -->
+        <svg class="title-svg" viewBox="0 0 1200 100" >
+          <text x="60%" y="60%" text-anchor="middle" dominant-baseline="middle" >
             <tspan x="16%" dy="-0.8em">Diferentes miradas</tspan>
             <tspan x="18%" dy="1.2em">diferentes habilidades</tspan>
           </text>
@@ -82,7 +82,7 @@
     <button class="section-four-button">
       <span>Click aquí</span>
       <span>Conoce el equipo</span>
-    </button>
+    </button>    
   </div>
 </div>
 <div class="divider divider-four">
@@ -137,7 +137,8 @@
     <hr class="section-eight-divider">
     <div class="section-eight-item">
       <p class="section-eight-text">¿Tienes un proyecto en mente y te gustaría colaborar?</p>
-      <span class="section-eight-hover-text">Más información sobre el texto 2</span>
+      <span class="section-eight-hover-text"><a class="nav-link" routerLink="/contact-us">Inicio</a>
+      </span>
     </div>
     <hr class="section-eight-divider">
     <div class="section-eight-item">

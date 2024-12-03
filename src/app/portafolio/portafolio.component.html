@@ -1,0 +1,43 @@
+<div class="filters-container">
+    <!-- Título del portafolio -->
+    <h2 class="portafolio-title">Portafolio</h2>
+  
+    <!-- Filtro de medio -->
+    <div class="medio">
+      <span class="filter-label">Medio: </span>
+      <div class="filter-options">
+        <span 
+          *ngFor="let medio of ['animacion', 'live-action', 'unscripted']"
+          class="filter-option" 
+          [class.selected]="mediosSeleccionados.includes(medio)" 
+          (click)="toggleMedio(medio)">
+          {{ medio | titlecase }}
+        </span>
+      </div>
+    </div>
+  
+    <!-- Filtro de portafolio -->
+    <div class="portafolio">
+      <span class="filter-label">Portafolio: </span>
+      <div class="filter-options">
+        <span 
+          *ngFor="let portafolio of ['largometraje', 'cortometraje', 'podcast', 'videoclip']"
+          class="filter-option" 
+          [class.selected]="portafoliosSeleccionados.includes(portafolio)" 
+          (click)="togglePortafolio(portafolio)">
+          {{ portafolio | titlecase }}
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Contenido de las tarjetas -->
+  <div class="page-content">
+    <div *ngFor="let item of filteredItems()" class="card" [style.background-image]="'url(' + item.imageUrl + ')'">
+      <div class="content">
+        <div class="title">{{ item.title }}</div>
+        <div class="copy">{{ item.description }}</div>
+      </div>
+    </div>
+  </div>
+  
