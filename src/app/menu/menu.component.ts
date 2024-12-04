@@ -7,52 +7,62 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  private timeout: any;  // Variable para almacenar el temporizador
-  private idleTime: number = 3000;  // Tiempo de inactividad antes de ocultar el menú (en milisegundos)
-  private isDesktop: boolean = true;  // Bandera para saber si estamos en una pantalla de escritorio
+  private timeout: any;
+  private idleTime: number = 3000; // Tiempo de inactividad antes de ocultar el menú (en milisegundos)
+  private isDesktop: boolean = true; // Bandera para saber si estamos en una pantalla de escritorio
+  public isMenuVisible: boolean = false; // Controla la visibilidad del menú
 
   constructor() { }
 
   ngOnInit(): void {
-    this.checkScreenSize();  // Verifica el tamaño de la pantalla al iniciar
+    this.checkScreenSize(); // Verifica el tamaño de la pantalla al iniciar
     this.hideMenuAfterIdle();
   }
 
-  // Muestra el menú nuevamente cuando el ratón se mueve
   @HostListener('document:mousemove')
   onMouseMove(): void {
-    if (this.isDesktop) {  // Solo activar esta funcionalidad si estamos en una pantalla de escritorio
+    if (this.isDesktop) {
       const navbar = document.querySelector('.navbar') as HTMLElement;
-      navbar?.classList.remove('hidden');  // Muestra el menú cuando el ratón se mueve
-
-      // Reinicia el temporizador para que el menú se oculte nuevamente después de un período de inactividad
+      navbar?.classList.remove('hidden');
       clearTimeout(this.timeout);
-      this.hideMenuAfterIdle();  // Reinicia el temporizador para la inactividad
+      this.hideMenuAfterIdle();
     }
   }
 
-  // Oculta el menú después de un tiempo de inactividad
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: MouseEvent): void {
+    const navbar = document.querySelector('.navbar') as HTMLElement;
+    const menuButton = document.querySelector('.menu-button') as HTMLElement;
+
+    // Verifica si el clic fue fuera del menú o del botón que abre el menú
+    if (navbar && !navbar.contains(event.target as Node) && !menuButton.contains(event.target as Node)) {
+      this.isMenuVisible = false;
+    }
+  }
+
   hideMenuAfterIdle(): void {
-    if (this.isDesktop) {  // Solo ocultar el menú si estamos en una pantalla de escritorio
+    if (this.isDesktop) {
       this.timeout = setTimeout(() => {
-        const navbar = document.querySelector('.navbar') as HTMLElement;
-        navbar?.classList.add('hidden');  // Oculta el menú después de un periodo de inactividad
+        this.isMenuVisible = false;
       }, this.idleTime);
     }
   }
 
-  // Detecta el tamaño de la pantalla y ajusta el comportamiento
   checkScreenSize(): void {
     if (window.innerWidth < 768) {
-      this.isDesktop = false;  // Si la pantalla es pequeña (móvil o tablet), desactivamos la funcionalidad
+      this.isDesktop = false; // Si la pantalla es pequeña
     } else {
-      this.isDesktop = true;   // Si la pantalla es grande (computadora), activamos la funcionalidad
+      this.isDesktop = true; // Si la pantalla es grande
     }
   }
 
-  // Detecta cambios en el tamaño de la ventana
   @HostListener('window:resize', ['$event'])
   onResize(event: any): void {
-    this.checkScreenSize();  // Verifica nuevamente el tamaño de la pantalla cuando se cambia el tamaño de la ventana
+    this.checkScreenSize(); // Revisa el tamaño cuando se cambia la ventana
+  }
+
+  // Método para alternar el menú
+  toggleMenu(): void {
+    this.isMenuVisible = !this.isMenuVisible; // Cambia la visibilidad del menú
   }
 }

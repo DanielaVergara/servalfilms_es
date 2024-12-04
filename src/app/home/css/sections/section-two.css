@@ -9,34 +9,41 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 4px;
 }
 
-.svg-title {
-  font-family: 'Rosarivo';
-  font-size: 40px;
-  fill: #ef940b;
-  letter-spacing: 2px;
-  padding-bottom: 100px; /* Este padding no afectará al texto, ya que el padding generalmente se aplica a contenedores */
-}
+  /**text */
 
+  .title-wrapper-two {
+    width: 100%;
+    overflow: hidden; /* Oculta contenido que se desborde */
+    box-sizing: border-box;
+  }
 
-.title-wrapper.section-two-title {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
+  .title-svg-section-two text {
+    font-family: 'Rosarivo';
+    font-size: 200%;
+    letter-spacing: 5px;
+    stroke: #ef940b;
+    stroke-width: 2;
+    animation: textAnimate-two 5s infinite alternate;
+    fill: transparent; /* Animación de relleno */
+  }
+  
+ 
+  @keyframes textAnimate-two {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset: 20%;
+      fill: hsl(189, 68%, 75%);
+    }
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffset: -20%;
+      fill: hsla(189, 68%, 75%, 0%);
+    }
+  }
 
-.svg-text {
-  font-family: 'Rosarivo', sans-serif;
-  font-size: 5vw; /* Tamaño relativo con vw para la fuente */
-  fill: #ef940b;
-  letter-spacing: 2px;
-  line-height: 1.2;
-  color: #ef940b;
-  max-font-size: 60px; /* Limitar el tamaño máximo */
-}
 
 .section-two-images {
   display: flex;
@@ -123,13 +130,15 @@
 
 /* Responsive: Ajustes para dispositivos móviles y tabletas */
 @media screen and (max-width: 768px) {
-  .svg-text {
-    font-size: 8vw; /* Título más pequeño en pantallas más pequeñas */
-    max-font-size: 50px; /* Límite en pantallas más pequeñas */
+
+  .title-svg-section-two text {
+    padding-top: 20%;
+    font-size: clamp(300%, 1000vw, 100%); /* El tamaño de la fuente se ajusta dinámicamente */
+    letter-spacing: 3px; /* Reduce el espaciado entre letras */
   }
 
   .section-two-text {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .section-two-image {
@@ -139,17 +148,22 @@
 
   .section-two-button {
     padding: 10px 50px;
+    padding-bottom: 2%;
   }
 
   .section-two-button span {
-    width: 300px;
+    width: 100%;
+    padding-bottom: 2%;
+
   }
 }
 
 @media screen and (max-width: 480px) {
-  .svg-text {
-    font-size: 10vw; /* Ajusta el tamaño aún más en pantallas más pequeñas */
-    max-font-size: 40px; /* Límite para dispositivos móviles */
+  
+  .title-svg-section-two text {
+    padding-top: 20%;
+    font-size: clamp(300%, 3000vw, 200%); /* El tamaño de la fuente se ajusta dinámicamente */
+    letter-spacing: 1px; /* Reduce el espaciado entre letras */
   }
 
   .section-two-button {
@@ -166,6 +180,6 @@
   }
 
   .section-two-button span {
-    width: 250px;
+    width: 100%;
   }
 }

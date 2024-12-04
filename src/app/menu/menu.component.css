@@ -1,23 +1,56 @@
+/* Asegurarse de que los enlaces dentro de <ul> sean visibles */
+.navbar-nav {
+  display: flex; /* Asegura que el contenedor de los enlaces esté en línea */
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav .nav-item {
+  width: 100%; /* Los elementos ocupan el 100% del ancho disponible */
+}
+
+.navbar-nav .nav-link {
+  color: #cc7f00; /* Naranja brillante y llamativo */
+  text-decoration: none;
+  font-size: 18px;
+  display: block; /* Hace que cada enlace ocupe todo el espacio disponible */
+  padding: 12px 0; /* Aumenta el tamaño de los enlaces */
+  text-align: center; /* Centra el texto */
+}
+
+/* Cambio de color al pasar el cursor por encima */
+.navbar-nav .nav-link:hover {
+  color: #ffcc00; /* Amarillo brillante */
+  background-color: #333; /* Fondo oscuro */
+  padding: 5px 10px; /* Espaciado adicional */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
 /* Estilo del menú */
 .navbar {
-  border: 2px solid #cc7f00;
+  border: 1px solid #cc7f00; /* Borde naranja brillante */
   border-radius: 50px 0 0 50px;
   white-space: nowrap;
-  width: 10%; /* Usar el 100% del ancho de la pantalla */
+  width: 13%; /* Usar el 100% del ancho de la pantalla */
   top: 15%;
   bottom: 20%;
   overflow-y: auto;
   padding: 10px;
-  opacity: 0.5;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad */
-  border-right: none;
-  box-sizing: border-box; /* Incluye el borde y padding en el ancho total */
+  background-color: #000; /* Fondo completamente negro */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: auto; /* Ajusta la altura de acuerdo al contenido */
-  overflow-x: hidden; /* Evita desbordamiento horizontal */
+  opacity: 1; /* Asegura que el fondo no tenga opacidad */
+  visibility: visible; /* Asegura que el menú sea visible */
+}
+
+/* La clase 'hidden' oculta el menú */
+.navbar.hidden {
+  display: none;
 }
 
 /* Para la posición fija */
@@ -28,42 +61,43 @@
   z-index: 1000;
 }
 
-/* Asegurarse de que el menú no deje espacio a la derecha */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
   .navbar {
-    width: 15vw; /* Hace que ocupe todo el ancho de la ventana */
+    width: 15vw;
     height: 50%;
-    max-width: 100%; /* Asegura que no haya un límite en el ancho */
-    margin: 0; /* Elimina márgenes para evitar desplazamientos */
-    padding: 10px 5px; /* Espaciado más pequeño */
-    box-sizing: border-box; /* Asegura que padding y bordes se incluyan */
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 5px;
+    box-sizing: border-box;
   }
 
   .navbar ul {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos */
+    align-items: center;
     padding: 0;
     margin: 0;
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
   }
 
   .navbar ul li {
-    width: 100%; /* Los elementos ocupan el 100% del ancho disponible */
+    width: 100%;
     text-align: center;
     box-sizing: border-box;
   }
 
   .navbar ul li a {
-    padding: 12px 0; /* Aumenta el tamaño de los enlaces */
+    padding: 12px 0;
     font-size: 18px;
-    display: block; /* Asegura que el enlace ocupe todo el ancho */
+    display: block;
   }
-}
 
-/* Desactivar la visibilidad cuando se oculta */
-.navbar.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
+  .navbar-nav.collapse {
+    display: none;
+  }
+
+  .navbar-nav.collapse.show {
+    display: flex;
+  }
 }

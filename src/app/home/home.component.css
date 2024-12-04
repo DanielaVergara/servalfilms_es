@@ -1,3 +1,4 @@
+/* Importaciones */
 @import './css/sections/section-one.css';
 @import './css/sections/section-two.css';
 @import './css/sections/section-three.css';
@@ -6,10 +7,10 @@
 @import './css/sections/section-six.css';
 @import './css/sections/section-seven.css';
 @import './css/sections/section-eight.css';
-
 @import './css/dividers/divider-home.css';
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
-
+/* Reset y configuración básica */
 * {
   margin: 0;
   padding: 0;
@@ -18,148 +19,93 @@
 
 html, body {
   width: 100%;
+  /*height: 100%;*/
   overflow-x: hidden; /* Evita barras de desplazamiento horizontal */
   margin: 0;
   padding: 0;
-  height: 100%;
-}
-
-  .home-container {
-    position: relative;
-    color: black; /* Color del texto sobre la imagen */
-    box-sizing: border-box; /* Asegura que el padding no afecte al ancho */
-    height: 100vh; /* Ocupa el 100% del alto de la pantalla */
-    display: flex; /* Usar flexbox para ajustar el contenido */
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
-    margin: 0; /* Elimina el margen para una apariencia más compacta */
-    padding: 0%;
-  }
-
-  .gif-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    will-change: transform;
-    z-index: -1;
-    background-color: #000; 
-  }
-
-  .gif-image {
-    transition: opacity 0.5s ease-in-out;
-  }
-
-  .gif-background .gif-image {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin estirarse o hacer zoom */
-    object-position: center bottom; /* Centra la imagen dentro del contenedor */
-  }
-
-  .title, .subtitle {
-    display: inline-block;
-    font-family: 'Rosarivo', serif; /* O cualquier otra fuente que estés usando */
-    color: #ffffff;
-    text-shadow: 2px 0 8px rgba(0, 179, 255, 0.634),
-                -5px 0 8px rgba(255, 70, 0, 0.8),
-                0 0 4px rgba(255, 199, 0, 1);
-    mix-blend-mode: screen;
-    font-size: 65px;
-    letter-spacing: 8px; /* Ajusta el espaciado entre letras si es necesario */
-    filter: blur(1px);
-    position: relative;
-  }
-
-  .icon {
-    width: 15%;
-  }
-
-/*tú*/
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-
-
-body {
-  background-color:  #151719;
+  background-color: #151719;
   display: flex;
   justify-content: left;
   align-items: center;
-  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.home-container {
+  position: relative;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column; /* Asegura disposición vertical */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  color: black;
+}
+
+/* Fondo GIF */
+.gif-background {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  text-align: right;  /* Esto alinea todo el contenido a la derecha */
+  height: 100%;
+  z-index: -1;
+  background-color: #000;
+  overflow: hidden;
 }
 
-
-.waviy {
-  position: relative;
-  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-  font-size: 60px;
+.gif-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+  object-position: center;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.waviy span {
-  font-family: 'Alfa Slab One', cursive;
-  position: relative;
-  display: inline-block;
-  color: #ef940b;
-  text-transform: uppercase;
-  animation: waviy 1s infinite;
-  animation-delay: calc(.1s * var(--i));
+/* Títulos */
+.title, .subtitle {
+  font-family: 'Rosarivo', serif;
+  font-size: 65px;
+  color: #ffffff;
+  text-shadow: 
+    2px 0 8px rgba(0, 179, 255, 0.634),
+    -5px 0 8px rgba(255, 70, 0, 0.8),
+    0 0 4px rgba(255, 199, 0, 1);
+  mix-blend-mode: screen;
+  letter-spacing: 8px;
+  text-align: center; /* Centra el texto */
+  margin-bottom: 20px;
 }
 
-@keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
-  }
-  20% {
-    transform: translateY(-20px)
-  }
+/* Iconos */
+.icon {
+  width: 15%;
 }
 
-  .title-svg {
-    width: 100%;
-    padding-bottom: 20px;
-  }
+/* Responsividad */
 
-  .title-svg text {
-    font-family: "Rosarivo"; /* Usa la misma fuente que en la sección uno */
-    letter-spacing: 5px; /* Ajusta el espaciado entre letras si es necesario */
-    stroke: #ef940b;
-    font-size: 150px; /* Ajusta este valor para cambiar el tamaño del texto */
-    font-weight: 700;
-    padding-bottom: 20px;
-    stroke-width: 2;
-    animation: textAnimate 5s infinite alternate;
-    dominant-baseline: middle; /* Asegura que el texto esté centrado verticalmente */
-  }
-
-
-  @keyframes textAnimate {
-    0% {
-      stroke-dasharray: 0 50%;
-      stroke-dashoffset: 20%;
-      fill: hsl(189, 68%, 75%);
-    }
-    100% {
-      stroke-dasharray: 50% 0;
-      stroke-dashoffset: -20%;
-      fill: hsla(189, 68%, 75%, 0%);
-    }
-  }
-
-
-  /*MOBILE*/
-/* Para pantallas de 768px o menos (tabletas y dispositivos móviles en orientación vertical) */
-@media screen and (max-width: 768px) {
+/* Pantallas medianas (tabletas) */
+@media (max-width: 768px) {
   .home-container {
-    padding: 0 10px; /* Añadir algo de espaciado lateral en pantallas más pequeñas */
+    padding: 0 10px;
+  }
+
+  .title, .subtitle {
+    font-size: 50px;
+    letter-spacing: 5px;
+  }
+
+  .icon {
+    width: 20%; /* Aumenta ligeramente el tamaño para dispositivos más pequeños */
   }
 }
 
+/* Pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
   .title, .subtitle {
     font-size: 30px;
     letter-spacing: 2px;
+  }
+
+  .icon {
+    width: 25%;
   }
 }

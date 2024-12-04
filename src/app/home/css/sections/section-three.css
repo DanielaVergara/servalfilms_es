@@ -34,15 +34,8 @@
   @media screen and (max-width: 768px) {
 
     .section-three video {
-      min-height: 100vh; /* Asegura que el video ocupe el 100% de la altura en pantallas más pequeñas */
+      height: 50vh; /* Limita la altura del contenedor en pantallas pequeñas */
     }  
-}
-
-@media (max-width: 768px) {
-    .section-three video {
-      width: 100%;
-      height: auto;
-    }
 }
   
 

@@ -64,6 +64,7 @@
   
   .section-six-left-text {
     width: 45%;
+    padding-top: 5%;
     font-size: 18px;
     line-height: 1.6;
     color: #d0d0d0;
@@ -87,22 +88,83 @@
     border-radius: 8px;
   }
   
-  .title-wrapper {
+  .title-wrapper-six {
     width: 100%;
     max-width: 100%;
     overflow: hidden; /* Oculta contenido que se desborde */
     padding: 0 15px; /* Espaciado interno adaptativo */
     box-sizing: border-box;
   }
+
+   /**text */
+
+   .title-svg-section-six text {
+    font-family: 'Rosarivo';
+    padding: 0 15px; /* Espaciado interno adaptativo */
+    font-size: 150%;
+    letter-spacing: 5px;
+    stroke: #ef940b;
+    stroke-width: 2;
+    animation: textAnimate-six 5s infinite alternate;
+    fill: transparent; /* Animación de relleno */
+  }
   
+  
+  @keyframes waviy {
+    0%, 40%, 100% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  
+  @keyframes textAnimate-six {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset: 20%;
+      fill: hsl(189, 68%, 75%);
+    }
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffset: -20%;
+      fill: hsla(189, 68%, 75%, 0%);
+    }
+  }
+
+.waviy {
+  position: relative;
+  font-size: 60px;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #ef940b;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+  /***/
+
+
   .section-six-left-text,
   .section-six-right-video {
-    width: 45%; /* Hace que ambos elementos ocupen 45% en pantallas grandes */
+    width: 50%; /* Hace que ambos elementos ocupen 45% en pantallas grandes */
+    height: 100%;
   }
 
 
   /* Para pantallas de 480px o menos (móviles) */
 @media screen and (max-width: 480px) {
+
+  .title-svg-section-six text {
+    font-size: clamp(180%, 1000vw, 180%); /* El tamaño de la fuente se ajusta dinámicamente */
+    letter-spacing: 3px; /* Reduce el espaciado entre letras */
+  }
 
     .section-six-content {
       flex-direction: column; /* Cambia a columna en pantallas pequeñas */
@@ -111,7 +173,9 @@
   
     .section-six-left-text,
     .section-six-right-video {
-      width: 80%; /* Hace que los elementos ocupen más espacio en pantallas pequeñas */
+      align-items: center;
+      padding-top: 5%;
+      width: 150%; /* Hace que los elementos ocupen más espacio en pantallas pequeñas */
     }
   
     .section-six-right-video {

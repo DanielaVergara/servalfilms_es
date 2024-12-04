@@ -1,7 +1,6 @@
-<div class="filters-container">
-    <!-- Título del portafolio -->
-    <h2 class="portafolio-title">Portafolio</h2>
-  
+<h1 class="portafolio-title">Portafolio</h1>
+
+  <div class="filters-container">
     <!-- Filtro de medio -->
     <div class="medio">
       <span class="filter-label">Medio: </span>
@@ -15,7 +14,7 @@
         </span>
       </div>
     </div>
-  
+
     <!-- Filtro de portafolio -->
     <div class="portafolio">
       <span class="filter-label">Portafolio: </span>
@@ -30,14 +29,14 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Contenido de las tarjetas -->
   <div class="page-content">
     <div *ngFor="let item of filteredItems()" class="card" [style.background-image]="'url(' + item.imageUrl + ')'">
       <div class="content">
         <div class="title">{{ item.title }}</div>
         <div class="copy">{{ item.description }}</div>
+        <button class="read-more">Read More</button>
       </div>
     </div>
   </div>
-  

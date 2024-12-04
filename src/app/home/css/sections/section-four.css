@@ -6,18 +6,54 @@
     background-image: url('../../../../assets/home/sectionFour/background_noise.png'); /* Imagen de granito */
     background-size: cover; /* Asegura que la imagen cubra toda la sección */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 40px 20px;
+    padding-bottom: 10%;
     display: flex;
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
     justify-content: space-between; /* Alinea el contenido: espacio entre los elementos */
     align-items: center; /* Centra el contenido en el eje horizontal */
     height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    overflow: hidden; /* Previene contenido desbordado */
+  }
+
+  /**text */
+
+  .title-svg-section-four text {
+    font-family: 'Rosarivo';
+    font-size: 140%;
+    letter-spacing: 5px;
+    stroke: #ef940b;
+    stroke-width: 2;
+    animation: textAnimate-four 3s infinite alternate;
+    fill: transparent; /* Animación de relleno */
   }
   
-  
+  .title-wrapper-four {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* Oculta contenido que se desborde */
+    box-sizing: border-box;
+    padding-top: 20%;
+  }
+
+  @keyframes textAnimate-four {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset: 20%;
+      fill: hsl(189, 68%, 75%);
+    }
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffset: -20%;
+      fill: hsla(189, 68%, 75%, 0%);
+    }
+  }
+
+  /***/
+
+
   .section-four-content {
     display: flex;
-    gap: 100px;
+    gap: 10px;
     align-items: center;
     max-width: 1200px;
     flex-grow: 1; /* Hace que esta sección crezca y ocupe el espacio disponible */
@@ -28,19 +64,11 @@
     color: #eff8f8;
   }
 
-  .section-four-design{
-    font-family: 'Rosarivo'; 
-    font-size: 40px;
-     fill: #ef940b; 
-     letter-spacing: 2px; 
-     padding-bottom: 100px;
-  }
   
   .section-four-title {
     font-family: 'Rosario', sans-serif;
     font-size: clamp(1.5rem, 80vw, 2.25rem); /* Escala dinámicamente entre 1.5rem y 2.25rem */
     color: #ef940b;
-    padding-bottom: 15px;
     text-align: center; /* Centra el texto */
     margin-bottom: 1rem; /* Espaciado relativo inferior */
 
@@ -64,7 +92,6 @@
     margin-top: 2rem; /* Usa rem para espaciado relativo */
     align-items: center; /* Alinea verticalmente los span */
     justify-content: center; /* Centra los span horizontalmente */
-    padding: 10px 5%; /* Mantén el relleno proporcional */
     border-radius: 5px; /* Bordes redondeados */
     letter-spacing: 1px; /* Añadimos espaciado entre letras */
     transition: all 0.2s ease; /* Transición suave en hover */
@@ -146,68 +173,51 @@
 
 
   @media screen and (max-width: 768px) {
-    .section-four {
-       margin-top: 100rem; /* Reduce el espacio superior */
-        flex-direction: column; /* Apilar el contenido en lugar de usar la fila */
-        padding: 20px;
-        height: auto; /* Permite que la altura dependa del contenido */
-        min-height: 80vh; /* Para mantener coherencia en el diseño */
-      }
-    
-      .section-four-content {
-        gap: 20px; /* Reduce el espacio entre elementos */
-        width: 100%; /* Asegura que ocupe todo el ancho disponible */
-      }
-    
-      .section-four-button {
-        width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
-      }
-    
-      .section-four-title {
-        font-size: 60px; /* Reduce el tamaño del título */
-      }
-    
-      .section-four-text {
-        font-size: 16px; /* Reduce el tamaño del texto */
-      }
+    .title-wrapper-four {
+      padding-top: 30%;
+      padding-bottom: 5%;
+    }
+    .section-four-button {
+      padding-bottom: 500%;
+    }
 
+    .title-svg-section-four text {
+      font-size: clamp(125%, 1000vw, 50%); /* El tamaño de la fuente se ajusta dinámicamente */
+      letter-spacing: 3px; /* Reduce el espaciado entre letras */
+    }
 
       .section-four {
         flex-direction: column;
         height: auto; /* Permite crecer según el contenido */
-        padding: 20px;
       }
+  
     
       .section-four-content {
         gap: 20px; /* Reduce el espacio */
         flex-direction: column;
       }
-    
-      .section-four-text-container {
-        text-align: center; /* Alinea el texto en el centro */
-        max-width: 100%; /* Permite que el texto ocupe todo el ancho disponible */
+      
+      .section-four img {
+        width: 80%;  /* Las imágenes ocupan el 80% del contenedor */
       }
-  }
 
-  /* Para pantallas de 1024px o más (escritorios y tabletas en horizontal) */
-@media screen and (min-width: 1024px) {
-
-
-    .section-four-content {
-      gap: 50px; /* Espacio más grande entre los elementos */
-    }
-  
-    .section-four-button {
-      padding: 15px 80px;
-    }
   }
 
   @media screen and (max-width: 480px) {
-    .section-four-title {
-      font-size: 50px;
+    .section-four img {
+      width: 50%;  /* Las imágenes ocupan el 80% del contenedor */
     }
+
     .section-four-text {
       font-size: 14px;
+    }
+
+    .section-four-button {
+      padding-bottom: 3300%;
+    }
+
+    .section-four-button span {
+      width: 100%;
     }
   }
   

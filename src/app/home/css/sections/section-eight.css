@@ -61,11 +61,20 @@
   
   .section-eight-hover-text {
     text-align: left;
-    display: none;
+    display: none; /* El contenido está oculto inicialmente */
     font-size: 17px;
     font-family: 'Rosario', sans-serif;
     color: #ef940b; /* Color para el hover */
   }
+
+  .section-eight-hover-text a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #ef940b; /* Color del enlace */
+    font-size: 17px;
+    font-family: 'Rosario', sans-serif;
+    display: inline; /* Hace que el enlace se vea como texto normal */
+  }
+  
   
   .section-eight-item:hover .section-eight-hover-text {
     display: block;

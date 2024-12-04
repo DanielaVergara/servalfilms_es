@@ -5,9 +5,15 @@
         <div class="eng-es">Eng/Esp</div>
         <div class="title-serval"><u>Serval Films</u></div>
 
-        <ul class="navbar-nav flex-column">
+        <!-- Icono del menú de hamburguesa para pantallas pequeñas -->
+        <button class="navbar-toggler" type="button" (click)="toggleMenu()" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú de navegación para pantallas pequeñas -->
+        <ul class="navbar-nav flex-column collapse" id="navbarNav" [class.show]="isMenuVisible">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/inicio">Inicio</a>
+            <a class="nav-link" routerLink="/">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/inicio">Quienes somos</a>
@@ -22,7 +28,7 @@
             <a class="nav-link" routerLink="/inicio">Call to Action</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/inicio">Contáctanos</a>
+            <a class="nav-link" routerLink="/contact-us">Contáctanos</a>
           </li>
         </ul>
       </div>
