@@ -1,4 +1,4 @@
-/* section two */
+/* General Styles */
 .home-container.section-two {
   background-color: #6d0a37;
   background-image: url('../../../../assets/home/sectiontwo/background_noise.png');
@@ -12,38 +12,36 @@
   padding: 4px;
 }
 
-  /**text */
+.title-wrapper-two {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
 
-  .title-wrapper-two {
-    width: 100%;
-    overflow: hidden; /* Oculta contenido que se desborde */
-    box-sizing: border-box;
-  }
+.title-svg-section-two text {
+  font-family: 'Rosarivo';
+  font-size: 200%;
+  letter-spacing: 5px;
+  stroke: #ef940b;
+  stroke-width: 2;
+  animation: textAnimate-two 5s infinite alternate;
+  fill: transparent;
+  z-index: 10;
+}
 
-  .title-svg-section-two text {
-    font-family: 'Rosarivo';
-    font-size: 200%;
-    letter-spacing: 5px;
-    stroke: #ef940b;
-    stroke-width: 2;
-    animation: textAnimate-two 5s infinite alternate;
-    fill: transparent; /* Animación de relleno */
+@keyframes textAnimate-two {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+    fill: hsl(189, 68%, 75%);
   }
-  
- 
-  @keyframes textAnimate-two {
-    0% {
-      stroke-dasharray: 0 50%;
-      stroke-dashoffset: 20%;
-      fill: hsl(189, 68%, 75%);
-    }
-    100% {
-      stroke-dasharray: 50% 0;
-      stroke-dashoffset: -20%;
-      fill: hsla(189, 68%, 75%, 0%);
-    }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+    fill: hsla(189, 68%, 75%, 0%);
   }
-
+}
 
 .section-two-images {
   display: flex;
@@ -52,17 +50,23 @@
   gap: 20px;
   flex-wrap: wrap;
   width: 100%;
+  z-index: 1;
+  position: relative;
+  overflow: hidden; /* Evita que las imágenes se desborden */
 }
 
 .section-two-image {
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   height: auto;
   border-radius: 5px;
   object-fit: cover;
   border: 2px solid #cc7f00;
   transition: transform 0.3s ease;
   margin: 10px;
+  box-sizing: border-box;
 }
+
 
 .section-two-text {
   font-family: 'Rosario', sans-serif;
@@ -128,58 +132,148 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive: Ajustes para dispositivos móviles y tabletas */
-@media screen and (max-width: 768px) {
+/* Responsive Design */
 
+/* Pantallas pequeñas (<350px) */
+@media screen and (max-width: 350px) {
   .title-svg-section-two text {
-    padding-top: 20%;
-    font-size: clamp(300%, 1000vw, 100%); /* El tamaño de la fuente se ajusta dinámicamente */
-    letter-spacing: 3px; /* Reduce el espaciado entre letras */
+    font-size: 2000%;
+    letter-spacing: 2px;
+    stroke-dashoffset: 0;
+    fill: #ef940b;
+    stroke: transparent;
   }
 
   .section-two-text {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .section-two-image {
-    width: 80%;
-    max-width: 280px;
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 10px;
+    /* Asegura que la imagen se ajuste bien en pantallas pequeñas */
   }
 
   .section-two-button {
-    padding: 10px 50px;
-    padding-bottom: 2%;
+    padding: 8px 20px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 50%;
   }
 
   .section-two-button span {
+    padding: 12px 5px;
     width: 100%;
-    padding-bottom: 2%;
-
   }
 }
 
-@media screen and (max-width: 480px) {
-  
+/* Ajustes para pantallas pequeñas (<350px) */
+@media screen and (max-width: 350px) {
   .title-svg-section-two text {
-    padding-top: 20%;
-    font-size: clamp(300%, 3000vw, 200%); /* El tamaño de la fuente se ajusta dinámicamente */
-    letter-spacing: 1px; /* Reduce el espaciado entre letras */
+    font-size: 3rem;
+    letter-spacing: 2px;
+    stroke-dashoffset: 0;
+    fill: #ef940b;
+    stroke: transparent;
+    z-index: 20; /* Asegurar que el texto esté por encima de otros elementos */
+  }
+
+  .section-two-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Reducir el espacio entre imágenes */
+    margin-top: 20px; /* Separar imágenes del texto */
+    z-index: 1;
+    position: relative;
+    overflow: hidden; /* Evitar que las imágenes se desborden */
+  }
+
+  .section-two-image {
+    width: 100%;
+    max-width: 180px; /* Asegura que las imágenes no sean demasiado grandes */
+    margin-bottom: 10px;
+    border: 2px solid #cc7f00;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .section-two-text {
+    font-size: 14px; /* Reducir el tamaño del texto */
   }
 
   .section-two-button {
-    padding: 10px 30px;
+    padding: 8px 20px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 50%;
+  }
+}
+
+/* Ajustes para pantallas medianas (350px - 700px) */
+@media screen and (min-width: 350px) and (max-width: 700px) {
+  .title-svg-section-two text {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    stroke-dashoffset: 0;
+    stroke: transparent;
+  }
+
+  .section-two-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  .section-two-image {
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 10px;
   }
 
   .section-two-text {
     font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .section-two-button {
+    padding: 12px 40px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+/* Ajustes para pantallas grandes (>700px) */
+@media screen and (min-width: 700px) {
+  .title-svg-section-two text {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    stroke: #ef940b;
+    stroke-width: 2;
+    fill: transparent;
+  }
+
+  .section-two-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
   .section-two-image {
-    width: 90%;
-    max-width: 250px;
-  }
-
-  .section-two-button span {
     width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 2px solid #cc7f00;
+    transition: transform 0.3s ease;
+    margin: 10px;
   }
 }

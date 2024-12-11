@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-portafolio',
   templateUrl: './portafolio.component.html',
-  styleUrls: ['./portafolio.component.css']
+  styleUrls: ['./portafolio.component.css'],
+  encapsulation: ViewEncapsulation.None // Deshabilita encapsulación para probar
 })
 export class PortafolioComponent implements OnInit {
 
@@ -18,32 +19,46 @@ export class PortafolioComponent implements OnInit {
   // Lista de elementos para mostrar
   items = [
     {
-      title: 'Animation Project 1',
-      description: 'Description of Animation Project 1',
-      imageUrl: 'assets/portafolio/logo.png',
+      title: 'Amor en los Tiempos de como sea que se llame el Presente',
+      description: 'En Distribución, Cortometraje',
+      imageUrl: 'assets/portafolio/AmorEnLosTiemposDeComoSeaQueSeLlameElPresente.jpg',
+      medio: 'animacion',
+      portafolio: 'cortometraje'
+    },
+    {
+      title: 'Amor en los Tiempos de como sea que se llame el Presente',
+      description: 'En Desarrollo, Largometraje',
+      imageUrl: 'assets/portafolio/AmorEnLosTiemposDeComoSeaQueSeLlameElPresente.jpg',
       medio: 'animacion',
       portafolio: 'largometraje'
     },
     {
-      title: 'Live Action Project 1',
-      description: 'Description of Live Action Project 1',
-      imageUrl: 'assets/portafolio/logo.png',
-      medio: 'live-action',
+      title: 'Una Mas',
+      description: 'En Produccion, Cortometraje',
+      imageUrl: 'assets/portafolio/UnaMas.JPG',
+      medio: 'animacion',
       portafolio: 'cortometraje'
     },
     {
-      title: 'Unscripted Project 1',
-      description: 'Description of Unscripted Project 1',
+      title: 'Nadie Vio Mi Película',
+      description: 'En Produccion, Podcast',
       imageUrl: 'assets/portafolio/logo.png',
       medio: 'unscripted',
       portafolio: 'podcast'
     },
     {
-      title: 'Mixed Project',
-      description: 'This project belongs to multiple categories',
+      title: 'El Rio',
+      description: 'En distribucion, Video Clip',
       imageUrl: 'assets/portafolio/logo.png',
       medio: 'live-action',
-      portafolio: 'largometraje'
+      portafolio: 'videoclip'
+    },
+    {
+      title: 'Maquina de Humo',
+      description: 'En distribucion, Video Clip',
+      imageUrl: 'assets/portafolio/logo.png',
+      medio: 'live-action',
+      portafolio: 'videoclip'
     }
   ];
 

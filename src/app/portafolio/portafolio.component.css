@@ -1,69 +1,77 @@
-@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosarivo&family=Cinzel+Decorative&display=swap');
 
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: 'Rubik', sans-serif;
-  --font-serif: 'Cardo', serif;
-  --naranja: #f57c00;
+  --font-rosarivo: 'Rosarivo', serif;
+  --font-cinzel: 'Cinzel Decorative', serif;
+  --_mesh-gradient-blur: 0px;
+  --_mesh-gradient-blend-mode: normal;
 }
 
+/* Estilos base */
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-sans);
-  background: radial-gradient(circle, rgba(255, 204, 0, 0.8), rgba(255, 102, 0, 0.8));
-  filter: none;
+
+/* Contenedor del portafolio */
+.portafolio-container {
+  min-height: auto; /* O usa height: auto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: radial-gradient(at 73% 7%, #3e0f42 0px, transparent 50%), 
+              radial-gradient(at 37% 33%, #6d0a37 0px, transparent 50%), 
+              radial-gradient(at 79% 36%, #0e2f2f 0px, transparent 50%), 
+              radial-gradient(at 36% 87%, #122739 0px, transparent 50%), 
+              radial-gradient(at 22% 49%, #0e2f2f 0px, transparent 50%), 
+              radial-gradient(at 50% 64%, #0e2f2f 0px, transparent 50%) #000000;
+  mix-blend-mode: var(--_mesh-gradient-blend-mode);
+  filter: blur(var(--_mesh-gradient-blur));
+  padding-bottom: 80px; /* Espacio para el footer */
+
+  padding: 2rem 0;
 }
 
-body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  color: white;
-  position: relative;
-  padding-top: 20px;
-}
-
-.portafolio-title {
-  font-size: 2.5rem;
+/* Subtítulo Medio y Portafolio */
+.filters-container .filter-label {
+  font-family: var(--font-cinzel); /* Fuente Cinzel Decorative */
+  font-size: 1rem;
   font-weight: bold;
-  text-align: center;
-  position: relative;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  color: black;
-}
-
-.filters-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 120px;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 2rem;
-  position: relative;
-  z-index: 2;
-}
-
-.medio, .portafolio {
-  display: flex;
-  align-items: center;
+  color: #fffbeb; /* Color del subtítulo */
 }
 
 .filter-label {
+  font-size: 1rem;
   font-weight: bold;
-  margin-right: 1rem;
 }
 
-.filter-options {
+/* Título del portafolio */
+.portafolio-container .portafolio-title {
+  font-family: var(--font-rosarivo); /* Fuente Rosarivo para el título */
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 1rem 0;
+  word-wrap: break-word; /* Para evitar desbordamiento en textos largos */
+}
+
+/* Contenedores de filtros */
+.portafolio-container .filters-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  flex-wrap: wrap; /* Agregado para permitir que los elementos se ajusten */
+}
+
+.filters-container .filter-options {
   display: flex;
   gap: 1rem;
 }
@@ -71,10 +79,13 @@ body {
 .filter-option {
   padding: 0.5rem 1rem;
   background-color: #333;
+  font-family: var(--font-cinzel); /* Fuente Cinzel Decorative */
   color: white;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 0.5rem; /* Agregar espacio entre los elementos */
+
 }
 
 .filter-option:hover {
@@ -82,41 +93,56 @@ body {
 }
 
 .filter-option.selected {
-  background-color: #f57c00;
+  background-color: #6d0a37;
+}
+
+/* Contenido de las tarjetas */
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aseguramos que haya un mínimo de 300px por columna */
+  padding: 0 2rem;
 }
 
 .page-content {
   display: grid;
   grid-gap: 1rem;
-  max-width: 1024px;
+  max-width: 100%; /* Esto asegura que no se desborde */
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px como tamaño mínimo */
   padding: 0 2rem;
-  position: relative;
-  z-index: 1;
-  margin-top: 80px;
-  margin-bottom: 2%;
 }
 
-.card {
+.page-content .card {
   position: relative;
+  background-color: white;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  overflow: hidden;
+  width: 100%;
+  min-height: 250px; /* Altura mínima para que la imagen cubra */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  overflow: hidden;
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: white;
-  color: #333;
-  border-radius: 20px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, filter 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.card:hover {
+
+.page-content .card:hover {
   transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  height: 100%; /* Asegura que la imagen ocupe toda la altura disponible */
+  object-fit: contain; /* Ajusta la imagen para que se vea completamente sin recortarse ni deformarse */
+  object-position: center; /* Alinea la imagen al centro en caso de que haya espacio vacío */
 }
 
 .card .content {
@@ -124,88 +150,55 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  text-align: center;
+  padding-bottom: 10%;
+  z-index: 1; /* Asegura que el contenido se superponga sobre la imagen */
+  opacity: 0; /* Oculta el contenido por defecto */
+  transition: opacity 0.3s ease; /* Transición para el cambio de visibilidad */
+}
+.card .title,
+.card .copy {
+  color: white;
+  word-wrap: break-word; /* Evita que el texto largo desborde */
+  text-align: center;
 }
 
-.card:hover .content {
-  opacity: 1;
+.page-content .card:hover .content {
+  opacity: 1; /* Muestra el contenido cuando se pasa el mouse */
 }
 
-.title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-top: 20%;
-}
-
-.copy {
-  font-family: var(--font-serif);
-  font-size: 1.125rem;
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.read-more {
-  background-color: var(--naranja);
+.card .read-more {
+  background-color: #3e0f42;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.read-more:hover {
-  background-color: #d96d00;
+.card .read-more:hover {
+  background-color: #6d0a37;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+/* Footer */
+.portafolio-container footer {
+  margin-top: auto;
   text-align: center;
   padding: 1rem;
-  background-color: #333;
   color: white;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-footer:hover {
-  opacity: 1;
-}
-
-/* Mobile responsiveness */
 @media (max-width: 768px) {
+  .portafolio-container .portafolio-title {
+    font-size: 1.8rem;
+  }
+
   .filters-container {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .filter-options {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .page-content {
-    padding: 0 1rem;
-  }
-
-  .card {
-    flex-direction: column;
-    padding: 1rem;
-    height: auto;
-  }
-
-  .title {
-    margin-top: 15%;
-    font-size: 1.1rem;
-  }
-
-  .copy {
-    font-size: 1rem;
-  }
-
-  .read-more {
-    font-size: 0.9rem;
+    flex-wrap: wrap;
   }
 }

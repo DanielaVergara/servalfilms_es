@@ -1,9 +1,11 @@
-<h1 class="portafolio-title">Portafolio</h1>
+<div class="portafolio-container">
+  <!-- Título del portafolio -->
+  <h1 class="portafolio-title">Portafolio</h1>
 
+  <!-- Filtros -->
   <div class="filters-container">
     <!-- Filtro de medio -->
     <div class="medio">
-      <span class="filter-label">Medio: </span>
       <div class="filter-options">
         <span 
           *ngFor="let medio of ['animacion', 'live-action', 'unscripted']"
@@ -17,7 +19,6 @@
 
     <!-- Filtro de portafolio -->
     <div class="portafolio">
-      <span class="filter-label">Portafolio: </span>
       <div class="filter-options">
         <span 
           *ngFor="let portafolio of ['largometraje', 'cortometraje', 'podcast', 'videoclip']"
@@ -40,3 +41,4 @@
       </div>
     </div>
   </div>
+</div>
