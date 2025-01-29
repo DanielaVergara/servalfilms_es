@@ -34,6 +34,7 @@
   <!-- Contenido de las tarjetas -->
   <div class="page-content">
     <div *ngFor="let item of filteredItems()" class="card" [style.background-image]="'url(' + item.imageUrl + ')'">
+      <div class="overlay"></div> <!-- Capa oscura añadida -->
       <div class="content">
         <div class="title">{{ item.title }}</div>
         <div class="copy">{{ item.description }}</div>
@@ -41,4 +42,6 @@
       </div>
     </div>
   </div>
+</div>
+<div class="divider divider-one">
 </div>

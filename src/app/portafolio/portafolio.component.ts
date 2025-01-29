@@ -20,45 +20,45 @@ export class PortafolioComponent implements OnInit {
   items = [
     {
       title: 'Amor en los Tiempos de como sea que se llame el Presente',
-      description: 'En Distribución, Cortometraje',
-      imageUrl: 'assets/portafolio/AmorEnLosTiemposDeComoSeaQueSeLlameElPresente.jpg',
-      medio: 'animacion',
-      portafolio: 'cortometraje'
-    },
-    {
-      title: 'Amor en los Tiempos de como sea que se llame el Presente',
       description: 'En Desarrollo, Largometraje',
-      imageUrl: 'assets/portafolio/AmorEnLosTiemposDeComoSeaQueSeLlameElPresente.jpg',
+      imageUrl: 'assets/portafolio/AmorEnLosTiemposDeComoSeaQueSeLlameElPresenteLargo.jpg',
       medio: 'animacion',
       portafolio: 'largometraje'
     },
     {
-      title: 'Una Mas',
-      description: 'En Produccion, Cortometraje',
-      imageUrl: 'assets/portafolio/UnaMas.JPG',
+      title: 'Amor en los Tiempos de como sea que se llame el Presente.',
+      description: 'En Distribución, Cortometraje',
+      imageUrl: 'assets/portafolio/AmorEnLosTiemposDeComoSeaQueSeLlameElPresenteCorto.jpg',
       medio: 'animacion',
       portafolio: 'cortometraje'
     },
     {
       title: 'Nadie Vio Mi Película',
       description: 'En Produccion, Podcast',
-      imageUrl: 'assets/portafolio/logo.png',
+      imageUrl: 'assets/portafolio/NadieVioMiPelicula.png',
       medio: 'unscripted',
       portafolio: 'podcast'
     },
     {
-      title: 'El Rio',
+      title: 'Maquina de Humo',
       description: 'En distribucion, Video Clip',
-      imageUrl: 'assets/portafolio/logo.png',
+      imageUrl: 'assets/portafolio/MaquinaDeHumo.png',
       medio: 'live-action',
       portafolio: 'videoclip'
     },
     {
-      title: 'Maquina de Humo',
-      description: 'En distribucion, Video Clip',
-      imageUrl: 'assets/portafolio/logo.png',
-      medio: 'live-action',
+      title: 'Comfort in the Kill',
+      description: 'En producción, Video Clip',
+      imageUrl: 'assets/portafolio/ComfortintheKill.jpg',
+      medio: 'animacion',
       portafolio: 'videoclip'
+    },
+    {
+      title: 'Una Mas',
+      description: 'En Produccion, Cortometraje',
+      imageUrl: 'assets/portafolio/UnaMas.jpg',
+      medio: 'animacion',
+      portafolio: 'cortometraje'
     }
   ];
 

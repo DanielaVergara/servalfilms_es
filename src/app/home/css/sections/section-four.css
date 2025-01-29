@@ -171,6 +171,81 @@
     margin-top: 10px; 
   }
 
+  @media screen and (max-width: 320px) and (min-width: 300px) {
+    .section-four {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: auto; /* Deja que la altura crezca dinámicamente según el contenido */
+      min-height: 100vh; /* Asegura que ocupe al menos la altura total de la pantalla */
+    }
+  
+    .title-wrapper-four {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+    }
+  
+    .title-svg-section-four text {
+      font-size: clamp(18px, 4vw, 22px);
+      letter-spacing: 1px;
+    }
+  
+    .section-four-content {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      align-items: center;
+      margin-top: 20px; /* Espacio superior para la sección */
+    }
+  
+    .section-four-text-container {
+      text-align: justify;
+      font-size: 14px;
+      color: #eff8f8;
+      width: 100%;
+      margin-bottom: 20px;
+      padding-top: 200px; /* Ajusta el espaciado superior del texto */
+    }
+  
+    .section-four-title {
+      font-size: clamp(20px, 5vw, 24px);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  
+    .section-four-button {
+      width: 80%;
+      max-width: 300px;
+      text-align: center;
+      font-size: 14px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  
+    .section-four-images {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .section-four-image {
+      width: 80%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #cc7f00;
+    }
+  
+    .section-four-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
 
   @media screen and (max-width: 768px) {
     .title-wrapper-four {

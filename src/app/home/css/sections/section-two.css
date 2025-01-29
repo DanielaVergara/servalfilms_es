@@ -137,10 +137,12 @@
 /* Pantallas pequeñas (<350px) */
 @media screen and (max-width: 350px) {
   .title-svg-section-two text {
-    font-size: 2000%;
+    font-size: 20%;
     letter-spacing: 2px;
     stroke-dashoffset: 0;
     fill: #ef940b;
+    animation: none; /* Desactiva animación para pantallas pequeñas */
+    fill: #ef940b; /* Asegura que el texto sea visible */
     stroke: transparent;
   }
 
@@ -148,15 +150,26 @@
     font-size: 14px;
   }
 
+  .section-two-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px; /* Separación del texto */
+    position: relative;
+    z-index: 1; /* Las imágenes debajo del texto */
+  }
+
   .section-two-image {
-    width: 100%;
-    max-width: 180px;
-    margin-bottom: 10px;
-    /* Asegura que la imagen se ajuste bien en pantallas pequeñas */
+    max-width: 150px; /* Tamaño reducido para ajustarse */
+    border: 2px solid #cc7f00;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
 
   .section-two-button {
-    padding: 8px 20px;
+    padding: 2px 5px;
     font-size: 14px;
     margin-top: 20px;
     margin-bottom: 50%;
@@ -165,51 +178,6 @@
   .section-two-button span {
     padding: 12px 5px;
     width: 100%;
-  }
-}
-
-/* Ajustes para pantallas pequeñas (<350px) */
-@media screen and (max-width: 350px) {
-  .title-svg-section-two text {
-    font-size: 3rem;
-    letter-spacing: 2px;
-    stroke-dashoffset: 0;
-    fill: #ef940b;
-    stroke: transparent;
-    z-index: 20; /* Asegurar que el texto esté por encima de otros elementos */
-  }
-
-  .section-two-images {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px; /* Reducir el espacio entre imágenes */
-    margin-top: 20px; /* Separar imágenes del texto */
-    z-index: 1;
-    position: relative;
-    overflow: hidden; /* Evitar que las imágenes se desborden */
-  }
-
-  .section-two-image {
-    width: 100%;
-    max-width: 180px; /* Asegura que las imágenes no sean demasiado grandes */
-    margin-bottom: 10px;
-    border: 2px solid #cc7f00;
-    border-radius: 5px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    box-sizing: border-box;
-  }
-
-  .section-two-text {
-    font-size: 14px; /* Reducir el tamaño del texto */
-  }
-
-  .section-two-button {
-    padding: 8px 20px;
-    font-size: 14px;
-    margin-top: 20px;
-    margin-bottom: 50%;
   }
 }
 
@@ -224,11 +192,12 @@
 
   .section-two-images {
     display: flex;
-    justify-content: center;
-    gap: 15px;
     flex-wrap: wrap;
-    z-index: 1;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px; /* Separación del texto */
+    position: relative;
+    z-index: 1; /* Las imágenes debajo del texto */
   }
 
   .section-two-image {

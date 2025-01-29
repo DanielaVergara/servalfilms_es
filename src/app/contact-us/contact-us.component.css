@@ -1,263 +1,168 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-
-:root {
-  --color-bg1: rgb(8, 10, 15);
-  --color-bg2: rgb(0, 17, 32);
-  --color1: 18, 113, 255;
-  --color2: 107, 74, 255;
-  --color3: 100, 100, 255;
-  --color4: 50, 160, 220;
-  --color5: 80, 47, 122;
-  --color-interactive: 140, 100, 255;
-  --circle-size: 80%;
-  --blending: hard-light;
-}
-
-
-* {
-  margin:0;
-  padding:0;
-  outline:none;
-  list-style:none;
-  text-decoration:none;
-  box-sizing:border-box;
-  color:#FFF;
-  background: transparent;
-  border:none;
-}
-
+/* Asegúrate de que el body y html ocupen toda la pantalla */
 html, body {
-  font-family: 'Dongle', sans-serif;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  width: 100%; /* Asegura que el body ocupe todo el ancho de la pantalla */
+  display: flex; /* Usamos flex para colocar el contenido y el menú en línea */
 }
 
 body {
-  background: #FFF;
-  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-bg1);
+}
+
+.contact-container {
+  min-height: auto; /* O usa height: auto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: radial-gradient(at 73% 7%, #3e0f42 0px, transparent 50%), 
+              radial-gradient(at 37% 33%, #6d0a37 0px, transparent 50%), 
+              radial-gradient(at 79% 36%, #0e2f2f 0px, transparent 50%), 
+              radial-gradient(at 36% 87%, #122739 0px, transparent 50%), 
+              radial-gradient(at 22% 49%, #0e2f2f 0px, transparent 50%), 
+              radial-gradient(at 50% 64%, #0e2f2f 0px, transparent 50%) #000000;
+  mix-blend-mode: var(--_mesh-gradient-blend-mode);
+  filter: blur(var(--_mesh-gradient-blur));
+  padding-bottom: 80px; /* Espacio para el footer */
+  padding: 2rem 0;
+}
+
+
+/* El contenedor de tu componente debe ocupar todo el espacio disponible */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;  /* Esto permite que ocupe el espacio restante disponible */
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura */
+  width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+  background-image: url('../../assets/contact-us/background.svg');  /* Cambia la ruta al SVG */
+  background-size: cover;  /* El fondo cubre todo el contenedor */
+  background-position: center;  /* Centra el fondo */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fija el fondo mientras se hace scroll */
+}
+.title-wrapper-contact {
+  width: 100%;
   overflow: hidden;
-}
-
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
-.card {
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  user-select: none;
-  max-width: 600px;
-  padding: 48px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  box-shadow: 0 4px 90px rgba(0,0,0,0.1);
-  overflow: hidden;
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 34%, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%);
-    opacity: 0.3;
-    filter: blur(.5px);
-    mix-blend-mode: hard-light;
-  }
-
-
-  .noise {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    opacity: 0.1;
-  }
-
-  .content {
-    position: relative;
-    z-index: 2;
-    text-shadow: -3px 0px 2px rgba(0,0,0,0.1);
-  }
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 16px;
-}
-
-p {
-  line-height: 1.6;
-}
-
-
-@keyframes moveInCircle {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes moveVertical {
-  0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes moveHorizontal {
-  0% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-  50% {
-    transform: translateX(50%) translateY(10%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-10%);
-  }
-}
-
-
-.gradient-bg {
-  width: 100vw;
-  height: 100vh;
+  box-sizing: border-box;
   position: relative;
-  overflow: hidden;
-  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-  top: 0;
-  left: 0;
+}
 
-  .svgBlur {
-    display: none;
+.title-svg-contact text {
+  font-family: 'Rosarivo';
+  font-size: 250%;
+  letter-spacing: 5px;
+  stroke: #ef940b;
+  stroke-width: 2;
+  animation: textAnimate-two 5s infinite alternate;
+  fill: transparent;
+  z-index: 10;
+}
+
+.form-container {
+  display: flex;
+  background-color: var(--color-bg2);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 4);
+  max-width: 800px;
+  width: 100%;
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  background-color: var(--color3);
+  border: 1px solid var(--color4);
+  border-radius: 5px;
+  color: white;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-interactive);
+}
+
+button {
+  padding: 10px;
+  background-color: var(--color2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+}
+
+button:hover {
+  background-color: var(--color-interactive);
+}
+
+img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+@keyframes textAnimate-two {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+    fill: hsl(189, 68%, 75%);
   }
-
-  .noiseBg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    mix-blend-mode: soft-light;
-    opacity: 0.3;
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+    fill: hsla(189, 68%, 75%, 0%);
   }
-  .gradients-container {
-    filter: url(#goo) blur(40px) ;
-    width: 100%;
-    height: 100%;
-  }
+}
 
-  .g1 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
+/* Estilo para los inputs y textarea */
+input, textarea {
+  width: 100%; /* Asegura que los campos ocupen todo el ancho */
+  padding: 12px;
+  margin-bottom: 15px; /* Espaciado entre los campos */
+  background-color: #f0f0f0; /* Fondo claro para los campos */
+  border: 1px solid #ddd; /* Borde suave */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
 
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
 
-    transform-origin: center center;
-    animation: moveVertical 30s ease infinite;
+input:focus, textarea:focus {
+  outline: none; /* Eliminamos el borde predeterminado del navegador */
+  border-color: #ef940b; /* Color del borde cuando se enfoca */
+  box-shadow: 0 0 5px rgba(239, 148, 11, 0.5); /* Añadimos una sombra suave cuando está en foco */
+}
 
-    opacity: 1;
-  }
+input::placeholder, textarea::placeholder {
+  color: #aaa; /* Color del texto del placeholder */
+}
 
-  .g2 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
+/* Estilo del botón */
+button {
+  padding: 12px;
+  background-color: #ef940b; /* Fondo naranja */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 400px);
-    animation: moveInCircle 20s reverse infinite;
-
-    opacity: 1;
-  }
-
-  .g3 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2 + 200px);
-    left: calc(50% - var(--circle-size) / 2 - 500px);
-
-    transform-origin: calc(50% + 400px);
-    animation: moveInCircle 40s linear infinite;
-
-    opacity: 1;
-  }
-
-  .g4 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 200px);
-    animation: moveHorizontal 40s ease infinite;
-
-    opacity: 0.7;
-  }
-
-  .g5 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: calc(var(--circle-size) * 2);
-    height: calc(var(--circle-size) * 2);
-    top: calc(50% - var(--circle-size));
-    left: calc(50% - var(--circle-size));
-
-    transform-origin: calc(50% - 800px) calc(50% + 200px);
-    animation: moveInCircle 20s ease infinite;
-
-    opacity: 1;
-  }
-
-  .interactive {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: 100%;
-    height: 100%;
-    top: -50%;
-    left: -50%;
-
-    opacity: 0.7;
-  }
+button:hover {
+  background-color: #e6820b; /* Color del botón al pasar el cursor */
 }
