@@ -1,103 +1,95 @@
-/* Asegurarse de que los enlaces dentro de <ul> sean visibles */
-.navbar-nav {
-  display: flex; /* Asegura que el contenedor de los enlaces esté en línea */
-  flex-direction: column;
+.navbar {
+  background: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Rosario', sans-serif;
+  backdrop-filter: blur(10px); /* Efecto de desenfoque del fondo */
+  box-shadow: 0px 4px 10px #cc7f00; /* Sombra en la parte inferior */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+}
+
+
+
+/* --- Logo y nombre de la marca --- */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 6.5%;
+  margin-right: 10px;
+  width: 6.5%;
+}
+
+.brand-name {
+  color: #ffb700;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
   padding: 0;
   margin: 0;
+  flex-grow: 1; /* Ocupa el espacio disponible */
+  justify-content: flex-start; /* Alinea los links a la izquierda */
 }
 
-.navbar-nav .nav-item {
-  width: 100%; /* Los elementos ocupan el 100% del ancho disponible */
+
+.nav-links li {
+  display: inline;
 }
 
-.navbar-nav .nav-link {
-  color: #cc7f00; /* Naranja brillante y llamativo */
+.nav-links a {
+  color: #ffb700;
   text-decoration: none;
   font-size: 18px;
-  display: block; /* Hace que cada enlace ocupe todo el espacio disponible */
-  padding: 12px 0; /* Aumenta el tamaño de los enlaces */
-  text-align: center; /* Centra el texto */
+  transition: color 0.3s ease;
 }
 
-/* Cambio de color al pasar el cursor por encima */
-.navbar-nav .nav-link:hover {
-  color: #ffcc00; /* Amarillo brillante */
-  background-color: #333; /* Fondo oscuro */
-  padding: 5px 10px; /* Espaciado adicional */
-  border-radius: 5px; /* Bordes redondeados */
+.nav-links a:hover {
+  color: white;
 }
 
-/* Estilo del menú */
-.navbar {
-  border: 1px solid #cc7f00; /* Borde naranja brillante */
-  border-radius: 50px 0 0 50px;
-  white-space: nowrap;
-  width: 13%; /* Usar el 100% del ancho de la pantalla */
-  top: 15%;
-  bottom: 20%;
-  overflow-y: auto;
-  padding: 10px;
-  margin: 0;
-  background-color: #000; /* Fondo completamente negro */
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  opacity: 1; /* Asegura que el fondo no tenga opacidad */
-  visibility: visible; /* Asegura que el menú sea visible */
+/* --- Cambio de idioma a la derecha --- */
+.lang-switch {
+  margin-left: 5%;
 }
 
-/* La clase 'hidden' oculta el menú */
-.navbar.hidden {
-  display: none;
+.lang-switch a {
+  color: #ffb700;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-/* Para la posición fija */
-.fixed-right {
-  position: fixed;
-  top: 15%;
-  right: 0;
-  z-index: 1000;
+.lang-switch a:hover {
+  color: white;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  .navbar {
-    width: 15vw;
-    height: 50%;
-    max-width: 100%;
-    margin: 0;
-    padding: 10px 5px;
-    box-sizing: border-box;
-  }
+/* --- Para evitar superposición con el contenido --- */
+body {
+  padding-top: 70px; /* Ajusta según la altura del menú */
+}
 
-  .navbar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-
-  .navbar ul li {
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  .navbar ul li a {
-    padding: 12px 0;
-    font-size: 18px;
-    display: block;
-  }
-
-  .navbar-nav.collapse {
-    display: none;
-  }
-
-  .navbar-nav.collapse.show {
-    display: flex;
-  }
+/* Oculta la barra cuando está en el top */
+.hidden-navbar {
+  opacity: 0;
+  transform: translateY(-100%);
 }

@@ -1,31 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-right" style="background-color: #000000;">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-2 col-md-3 col-sm-4 col-12 mt-5">
-        <div class="eng-es">Eng/Esp</div>
-        <div class="title-serval"><u>Serval Films</u></div>
-
-        <!-- Icono del menú de hamburguesa para pantallas pequeñas -->
-        <button class="navbar-toggler" type="button" (click)="toggleMenu()" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menú de navegación para pantallas pequeñas -->
-        <ul class="navbar-nav flex-column collapse" id="navbarNav" [class.show]="isMenuVisible">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/inicio">Quienes somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/portafolio">Portafolio</a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contact-us">Contáctanos</a>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar" [ngClass]="{ 'hidden-navbar': isAtTop }">
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Serval Films Logo">
+      <span class="brand-name">Serval Films</span>
+    </div>
+    <ul class="nav-links">
+      <li><a routerLink="/">Inicio</a></li>
+      <li><a routerLink="/portafolio">Portafolio</a></li>
+      <li><a routerLink="/equipo">Equipo</a></li>
+      <li><a routerLink="/contact-us">Contacto</a></li>
+    </ul>
+    <div class="lang-switch">
+      <a routerLink="/lang">Eng/Span</a>
     </div>
   </div>
 </nav>

@@ -111,15 +111,6 @@
   padding: 0 1rem;
 }
 
-.page-content {
-  display: grid;
-  grid-gap: 1rem;
-  max-width: 100%; /* Esto asegura que no se desborde */
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px como tamaño mínimo */
-  padding: 0 2rem;
-}
-
 /* Capa superpuesta oscura para la imagen de fondo */
 .page-content .card .overlay {
   position: absolute;

@@ -1,18 +1,35 @@
-<div class="contact-container">
+<div class="contact-container ">
   <div class="title-wrapper-contact">
     <svg class="title-svg-contact" viewBox="0 0 1200 100">
       <text x="60%" y="60%" text-anchor="middle" dominant-baseline="middle">
         <tspan x="50%" dy="-0.8em">Contáctenos</tspan>
       </text>
-    </svg>
+    </svg>  
   </div>  
   <div class="form-container">
-    <form action="https://formsubmit.co/director@servalfilms.com" method="POST">
-      <input type="text" id="name" name="name" placeholder="Nombre completo" required>
-      <input type="email" id="email" name="email" placeholder="Correo electronico" required>
-      <textarea id="message" name="message" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <form action="https://formsubmit.co/director@servalfilms.com" method="POST" id="contact-form" (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+      <div class="input-group">
+        <input type="text" name="name" formControlName="name" placeholder="Nombre" required>
+        <span class="error" *ngIf="hasError('name')">⚠ Nombre requerido</span>
+      </div>
+    
+      <div class="input-group">
+        <input type="email" name="email"  formControlName="email" placeholder="Correo" required>
+        <span class="error" *ngIf="hasError('email')">
+          <span *ngIf="contactForm.get('email')?.errors?.['required']">⚠ Correo requerido</span>
+          <span *ngIf="contactForm.get('email')?.errors?.['email']">⚠ Formato inválido</span>
+        </span>
+      </div>
+    
+      <div class="input-group">
+        <textarea formControlName="message" name="message" placeholder="Mensaje" required></textarea>
+        <span class="error" *ngIf="hasError('message')">
+          <span *ngIf="contactForm.get('message')?.errors?.['required']">⚠ Mensaje requerido</span>
+          <span *ngIf="contactForm.get('message')?.errors?.['minlength']">⚠ Mínimo 10 caracteres</span>
+        </span>
+      </div>
+      <button type="submit" style="font-family: 'Cinzel Decorative', serif;">Enviar</button>
+    </form>    
     <img src="../../assets/contact-us/saludoHuesitos.gif" alt="Imagen de contacto">
   </div>
 </div>

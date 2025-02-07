@@ -164,5 +164,31 @@ button {
 }
 
 button:hover {
-  background-color: #e6820b; /* Color del botón al pasar el cursor */
+  background-color: #e6820b; 
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.input-group input.ng-invalid.ng-touched,
+.input-group textarea.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
