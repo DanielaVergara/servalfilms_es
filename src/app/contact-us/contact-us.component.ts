@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -10,6 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactUsComponent implements OnInit {
 
   contactForm: FormGroup;
+  isLoading = false;  // Variable para controlar el spinner
+  isSubmitted = false;  // Variable para controlar si el formulario ha sido enviado
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -24,8 +25,19 @@ export class ContactUsComponent implements OnInit {
       this.contactForm.markAllAsTouched();
       return;
     }
+
+    this.isLoading = true;  // Mostrar el spinner cuando el formulario se envía
+    this.isSubmitted = false;  // Reiniciar el mensaje de "Enviado"
+
+    // Simular el tiempo de espera para mostrar el spinner
+    setTimeout(() => {
+      this.isLoading = false;  // Ocultar el spinner después de 3 segundos (ajustar según sea necesario)
+      this.isSubmitted = true;  // Mostrar el mensaje de "Enviado"
+    }, 3000);
+
+    // Aquí enviamos el formulario real (si fuera necesario, puedes integrar tu servicio de backend)
     const formElement = document.getElementById('contact-form') as HTMLFormElement;
-    formElement.submit();
+    formElement.submit(); // Enviar el formulario
   }
 
   hasError(field: string): boolean {
@@ -33,9 +45,6 @@ export class ContactUsComponent implements OnInit {
     return control?.invalid && control?.touched ? true : false;
   }
 
-
   ngOnInit(): void { }
-
-  
 
 }

@@ -58,6 +58,19 @@
     font-size: 20px;
     margin-bottom: 5px;
   }
+
+  @keyframes backgroundMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+  
+  .home-container.section-eight {
+    background-color: #6d0a37;
+    background-image: url('../../../../assets/home/sectionEight/background_noise.png');
+    background-size: 300% 300%; 
+    background-repeat: no-repeat;
+    animation: backgroundMove 80s ease-in-out;
+  }
   
   .section-eight-hover-text {
     text-align: left;
@@ -80,6 +93,7 @@
   .section-eight-item:hover .section-eight-hover-text {
     display: block;
     margin-top: 10px;
+    animation: fadeInUp 0.5s ease-out forwards;
   }
   
   .section-eight-divider {

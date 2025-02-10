@@ -105,9 +105,10 @@
 .page-content {
   display: grid;
   grid-gap: 1rem;
-  max-width: 100%;
+  max-width: 1200px; /* Ajusta este valor si es necesario */
+  width: 100%;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aseguramos que haya un mínimo de 300px por columna */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   padding: 0 1rem;
 }
 

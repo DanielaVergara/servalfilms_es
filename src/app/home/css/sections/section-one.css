@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
 .container.section-one {
     display: flex;
     flex-direction: column;
@@ -6,6 +16,8 @@
     height: 100vh; /* Ocupa toda la altura de la ventana */
     padding: 0; /* Eliminamos el padding general */
     overflow: hidden; /* Oculta cualquier desbordamiento */
+    animation: fadeIn 1.5s ease-in-out forwards;
+    perspective: 1000px;
   }
 
     
@@ -13,7 +25,13 @@
     width: 100%; /* Asegura que el video ocupe todo el ancho */
     height: 100%; /* Asegura que el video ocupe toda la altura */
     object-fit: cover; /* Escala el video para cubrir completamente el contenedor */
+    transform: scale(1.1);
+    transition: transform 0.3s ease-out;
   }
+
+  .container.section-one:hover video {
+    transform: scale(1);
+}
 
   .section-one .title,
   .section-one .subtitle {

@@ -1,4 +1,4 @@
-<div class="contact-container ">
+<div class="contact-container">
   <div class="title-wrapper-contact">
     <svg class="title-svg-contact" viewBox="0 0 1200 100">
       <text x="60%" y="60%" text-anchor="middle" dominant-baseline="middle">
@@ -7,7 +7,7 @@
     </svg>  
   </div>  
   <div class="form-container">
-    <form action="https://formsubmit.co/director@servalfilms.com" method="POST" id="contact-form" (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+    <form action="https://formsubmit.co/71b15a65587f86a871cf7c99c602ab85" method="POST" id="contact-form" (ngSubmit)="onSubmit()" [formGroup]="contactForm">
       <div class="input-group">
         <input type="text" name="name" formControlName="name" placeholder="Nombre" required>
         <span class="error" *ngIf="hasError('name')">⚠ Nombre requerido</span>
@@ -28,7 +28,18 @@
           <span *ngIf="contactForm.get('message')?.errors?.['minlength']">⚠ Mínimo 10 caracteres</span>
         </span>
       </div>
-      <button type="submit" style="font-family: 'Cinzel Decorative', serif;">Enviar</button>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://servalfilms.com/#/contact-us">
+      <button type="submit" [disabled]="isLoading" style="font-family: 'Cinzel Decorative', serif;">Enviar</button>
+      
+      <div *ngIf="isSubmitted" class="success-message">
+        <p>¡Mensaje enviado con éxito!</p>
+      </div>
+
+      <div class="loading-spinner" *ngIf="isLoading">
+        <div class="spinner"></div>
+      </div>  
     </form>    
     <img src="../../assets/contact-us/saludoHuesitos.gif" alt="Imagen de contacto">
   </div>

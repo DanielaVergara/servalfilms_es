@@ -22,6 +22,20 @@
     padding: 0 15px; /* Para que se ajuste en pantallas pequeñas */
   }
   
+  @keyframes backgroundMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+  
+  .home-container.section-six {
+    background-color: #6d0a37;
+    background-image: url('../../../../assets/home/sectionSix/background-noise.png');
+    background-size: 300% 300%; 
+    background-repeat: no-repeat;
+    animation: backgroundMove 80s ease-in-out;
+  }
+
+
   .section-six-title {
     font-family: 'Rosarivo', serif;
     font-size: 50px;
