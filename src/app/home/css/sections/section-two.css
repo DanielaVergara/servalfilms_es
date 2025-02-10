@@ -156,8 +156,8 @@
     letter-spacing: 2px;
     stroke-dashoffset: 0;
     fill: #ef940b;
-    animation: none; /* Desactiva animación para pantallas pequeñas */
-    fill: #ef940b; /* Asegura que el texto sea visible */
+    animation: none; 
+    fill: #ef940b;
     stroke: transparent;
   }
 

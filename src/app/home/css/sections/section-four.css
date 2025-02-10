@@ -271,13 +271,13 @@
     }
 
     .title-svg-section-four text {
-      font-size: clamp(125%, 1000vw, 50%); /* El tamaño de la fuente se ajusta dinámicamente */
-      letter-spacing: 3px; /* Reduce el espaciado entre letras */
+      font-size: clamp(125%, 1000vw, 50%);
+      letter-spacing: 3px;
     }
 
       .section-four {
         flex-direction: column;
-        height: auto; /* Permite crecer según el contenido */
+        height: auto; 
       }
   
     

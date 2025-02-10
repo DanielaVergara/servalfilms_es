@@ -42,9 +42,9 @@
     letter-spacing: 3px;
     color: #ef940b;
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
-    overflow: hidden; /* Evita el desbordamiento del título */
-    text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   
   .section-six-text {
@@ -73,7 +73,7 @@
     width: 80%;
     margin-top: 60px;
     padding-top: 20px;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+    flex-wrap: wrap;
   }
   
   .section-six-left-text {
@@ -87,11 +87,11 @@
   .section-six-right-video {
     padding: 20px;
     width: 50%;
-    max-height: 80vh; /* Limita la altura a un porcentaje de la ventana */
+    max-height: 80vh;
     display: flex;
     justify-content: center;
-    aspect-ratio: 16 / 9; /* Mantiene la proporción del video */
-    overflow: hidden; /* Asegura que el contenido no se desborde */
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
   }
   
   .section-six-right-video iframe {
@@ -105,8 +105,8 @@
   .title-wrapper-six {
     width: 100%;
     max-width: 100%;
-    overflow: hidden; /* Oculta contenido que se desborde */
-    padding: 0 15px; /* Espaciado interno adaptativo */
+    overflow: hidden;
+    padding: 0 15px;
     box-sizing: border-box;
   }
 
@@ -114,13 +114,13 @@
 
    .title-svg-section-six text {
     font-family: 'Rosarivo';
-    padding: 0 15px; /* Espaciado interno adaptativo */
+    padding: 0 15px;
     font-size: 150%;
     letter-spacing: 5px;
     stroke: #ef940b;
     stroke-width: 2;
     animation: textAnimate-six 5s infinite alternate;
-    fill: transparent; /* Animación de relleno */
+    fill: transparent;
   }
   
   
@@ -167,7 +167,7 @@
 
   .section-six-left-text,
   .section-six-right-video {
-    width: 50%; /* Hace que ambos elementos ocupen 45% en pantallas grandes */
+    width: 50%;
     height: 100%;
   }
 
@@ -176,12 +176,12 @@
 @media screen and (max-width: 480px) {
 
   .title-svg-section-six text {
-    font-size: clamp(180%, 1000vw, 180%); /* El tamaño de la fuente se ajusta dinámicamente */
+    font-size: clamp(180%, 1000vw, 180%);
     letter-spacing: 3px; /* Reduce el espaciado entre letras */
   }
 
     .section-six-content {
-      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      flex-direction: column;
       align-items: center;
     }
   
@@ -189,7 +189,7 @@
     .section-six-right-video {
       align-items: center;
       padding-top: 5%;
-      width: 150%; /* Hace que los elementos ocupen más espacio en pantallas pequeñas */
+      width: 150%;
     }
   
     .section-six-right-video {

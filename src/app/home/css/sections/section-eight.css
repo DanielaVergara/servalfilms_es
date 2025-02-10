@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Cambiar a min-height */
+    min-height: 100vh;
     color: black;
     padding: 0;
     margin: 0;
@@ -15,8 +15,8 @@
     background-image: url('../../../../assets/home/sectionEight/background_noise.png');
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden; /* Evitar que el contenido se desborde */
-    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede */
+    overflow: hidden;
+    overflow-y: auto;
   
   }
   
@@ -43,13 +43,13 @@
     border-radius: 8px;
     width: 90%;
     transition: transform 0.3s ease;
-    max-width: 1100px; /* Evita que los items excedan el contenedor */
-    box-sizing: border-box; /* Incluye el padding y el borde en el cálculo del tamaño */
+    max-width: 1100px;
+    box-sizing: border-box;
   }
   
   
   .section-eight-item:hover {
-    transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+    transform: translateY(-10px);
   }
   
   .section-eight-text {
@@ -82,11 +82,11 @@
 
   .section-eight-hover-text a {
     z-index: 1;
-    text-decoration: none; /* Elimina el subrayado */
-    color: #ef940b; /* Color del enlace */
+    text-decoration: none;
+    color: #ef940b;
     font-size: 17px;
     font-family: 'Rosario', sans-serif;
-    display: inline; /* Hace que el enlace se vea como texto normal */
+    display: inline;
   }
   
   
@@ -97,10 +97,10 @@
   }
   
   .section-eight-divider {
-    height: 5px; /* Aumenta el grosor de la línea */
+    height: 5px;
     width: 85%;
-    background-color: rgb(153, 140, 20); /* Color de la línea */
-    border: none; /* Elimina cualquier borde predeterminado */
+    background-color: rgb(153, 140, 20);
+    border: none;
     margin: 20px 0; /* Ajusta el espacio alrededor del <hr> */
   }
 

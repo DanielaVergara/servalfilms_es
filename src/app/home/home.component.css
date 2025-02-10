@@ -71,7 +71,7 @@ html, body {
     0 0 4px rgba(255, 199, 0, 1);
   mix-blend-mode: screen;
   letter-spacing: 8px;
-  text-align: center; /* Centra el texto */
+  text-align: center; 
   margin-bottom: 20px;
 }
 
@@ -94,7 +94,7 @@ html, body {
   }
 
   .icon {
-    width: 20%; /* Aumenta ligeramente el tamaño para dispositivos más pequeños */
+    width: 20%;
   }
 }
 

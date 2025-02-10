@@ -11,20 +11,20 @@
 .container.section-one {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar los elementos verticalmente */
-    align-items: center; /* Centrar los elementos horizontalmente */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    padding: 0; /* Eliminamos el padding general */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0; 
+    overflow: hidden;
     animation: fadeIn 1.5s ease-in-out forwards;
     perspective: 1000px;
   }
 
     
   .container.section-one video {
-    width: 100%; /* Asegura que el video ocupe todo el ancho */
-    height: 100%; /* Asegura que el video ocupe toda la altura */
-    object-fit: cover; /* Escala el video para cubrir completamente el contenedor */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transform: scale(1.1);
     transition: transform 0.3s ease-out;
   }

@@ -1,23 +1,23 @@
 /*section five*/
 
 .home-container.section-five {
-    position: relative; /* Posiciona el contenedor de manera relativa */
-    width: 100%; /* Ocupa el ancho completo de la pantalla */
-    height: 100vh; /* Altura completa de la ventana */
-    overflow: hidden; /* Oculta cualquier parte del video que sobresalga */
-    background-color: black; /* Fondo negro para evitar bordes blancos */
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
   }
   
   .section-five video {
-    position: absolute; /* Posiciona el video para poder centrarlo */
-    top: 50%; /* Centra el video verticalmente */
-    left: 50%; /* Centra el video horizontalmente */
-    width: 100%; /* Ancho del video ajustado al contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    min-height: 100%; /* Asegura que cubra al menos toda la altura */
-    min-width: 100%; /* Asegura que cubra al menos todo el ancho */
-    transform: translate(-50%, -50%); /* Centra el video en el contenedor */
-    object-fit: cover; /* Escala el video para cubrir todo el contenedor */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%); 
+    object-fit: cover;
   }
   
   
@@ -31,8 +31,8 @@
   /* Para pantallas de 480px o menos (móviles) */
 @media screen and (max-width: 480px) {
     .section-five video {
-      width: auto; /* Escala proporcionalmente */
-      height: 100%; /* Asegura que cubra la altura mínima */
-      object-fit: contain; /* Evita recortes excesivos en proporciones muy extremas */
+      width: auto;
+      height: 100%;
+      object-fit: contain;
     }
 }
